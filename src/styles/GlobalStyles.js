@@ -8,6 +8,11 @@ const GlobalStyles = createGlobalStyle`
   }
   :root{
     // colors are supposed to be here
+    --dark-bg: #13070c;
+    --dark-main: #6b4d57;
+    --brown: #896a67;
+    --light: #ddc8c4;
+    --highlight: #aa915b;
   }
   html{
     font-size: 10px;
