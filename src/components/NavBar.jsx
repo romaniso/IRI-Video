@@ -5,22 +5,23 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
 
 const NavBarStyles = styled.nav`
-  background: var(--dark-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem;
+  margin: 1.5rem 7rem;
+  border-bottom: 2px solid #aa915b75;
 
   .logo {
-    width: 100px;
+    width: 90px;
+    margin-bottom: 1rem;
   }
 
   .menu {
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 2.2rem;
+    top: 3rem;
     width: 4rem;
 
     &:hover path {
@@ -41,8 +42,8 @@ const NavBarStyles = styled.nav`
     display: none;
     position: absolute;
     cursor: pointer;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 2.2rem;
+    top: 3rem;
     width: 4rem;
     &:hover path {
       color: white;
@@ -72,8 +73,8 @@ const NavBarStyles = styled.nav`
         content: "";
         display: block;
         width: 0;
-        height: 2px;
-        background: white;
+        height: 1px;
+        background: var(--light);
         transition: 0.3s ease-in;
       }
       :hover::after {
@@ -82,13 +83,27 @@ const NavBarStyles = styled.nav`
 
       a {
         display: block;
-        color: var(--light);
+        color: var(--highlight);
         text-transform: uppercase;
         font-size: 2rem;
 
         &.active {
-          color: white;
+          color: var(--light);
         }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin: 1.5rem 3rem;
+
+    .logo {
+      width: 80px;
+    }
+
+    ul {
+      li a {
+        font-size: 1.6rem;
       }
     }
   }
@@ -122,7 +137,8 @@ const NavBarStyles = styled.nav`
       justify-content: space-evenly;
       align-items: center;
       z-index: 999;
-      background: #797878;
+      background: var(--dark-bg);
+      border: 2px solid var(--highlight);
       border-radius: 15px;
       transition: 0.3s ease-in;
 
@@ -161,13 +177,33 @@ export default function NavBar() {
         >
           <AiOutlineClose />
         </div>
-        {navLinks.map((navLink, index) => (
-          <li key={index}>
-            <NavLink to={navLink.to} onClick={() => setShowNavBar(!showNavBar)}>
-              {navLink.title}
-            </NavLink>
-          </li>
-        ))}
+        {navLinks.map((navLink, index) => {
+          // to think how to highlight contact button
+          if (navLink.title.toLowerCase() === "contact") {
+            return (
+              <li key={index}>
+                <NavLink
+                  to={navLink.to}
+                  onClick={() => setShowNavBar(!showNavBar)}
+                  className="button"
+                >
+                  {navLink.title}
+                </NavLink>
+              </li>
+            );
+          } else {
+            return (
+              <li key={index}>
+                <NavLink
+                  to={navLink.to}
+                  onClick={() => setShowNavBar(!showNavBar)}
+                >
+                  {navLink.title}
+                </NavLink>
+              </li>
+            );
+          }
+        })}
       </ul>
     </NavBarStyles>
   );

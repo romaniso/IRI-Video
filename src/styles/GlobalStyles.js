@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --dark-bg: #13070c;
     --dark-main: #6b4d57;
     --brown: #896a67;
-    --light: #ddc8c4;
+    --light: #f7ebc1;
     --highlight: #aa915b;
   }
   html{
@@ -31,10 +31,10 @@ const GlobalStyles = createGlobalStyle`
     object-fit: cover;
   }
   button{
-    outline: none
+    outline: none;
   }
   .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 90%;
     margin: 0 auto;
   }
