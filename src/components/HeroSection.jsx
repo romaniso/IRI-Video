@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import VideoBg from "../assets/videos/frank.mp4";
+import VideoBg from "../assets/videos/background.mp4";
 import Card from "./Card";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
