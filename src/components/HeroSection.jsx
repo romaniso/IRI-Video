@@ -14,6 +14,9 @@ const HeroSectionStyles = styled.div`
     filter: brightness(30%) grayscale(50%);
     video {
       opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

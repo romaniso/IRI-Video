@@ -139,7 +139,7 @@ const NavBarStyles = styled.nav`
       z-index: 999;
       background: var(--dark-bg);
       border: 2px solid var(--highlight);
-      border-radius: 15px;
+      /* border-radius: 15px; */
       transition: 0.3s ease-in;
 
       &.hidden {

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 const DescriptionSectionStyles = styled.div`
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 800px;
+  /* margin: 0 auto; */
   margin-top: 2rem;
   font-size: 1.8rem;
   line-height: 1.2em;
