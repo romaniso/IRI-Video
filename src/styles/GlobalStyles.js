@@ -38,6 +38,15 @@ const GlobalStyles = createGlobalStyle`
     width: 90%;
     margin: 0 auto;
   }
+
+  .card {
+    background: rgba(249, 249, 249, 0.042);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 3rem 4rem;
+
+  }
 /* Smooth Scroll  */
   [data-scrollbar] {
     height: 100vh;

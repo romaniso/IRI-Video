@@ -11,22 +11,24 @@ const CardStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 4rem;
-  background: rgba(249, 249, 249, 0.042);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+
   @media only screen and (max-width: 768px) {
     padding: 2rem 3rem;
     max-width: 450px;
   }
 `;
 
-export default function Card({ heading, subheading, description, btnText }) {
+export default function Card({
+  heading,
+  subheading,
+  description,
+  btnText,
+  btnLink,
+}) {
   return (
-    <CardStyles id="card">
+    <CardStyles id="card" className="card">
       <TitleSection heading={heading} subheading={subheading} />
-      <Button btnText={btnText} cardBtn={true} />
+      <Button btnText={btnText} cardBtn={true} btnLink={btnLink} />
       <DescriptionSection>{description}</DescriptionSection>
     </CardStyles>
   );

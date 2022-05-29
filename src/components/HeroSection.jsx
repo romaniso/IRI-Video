@@ -81,6 +81,7 @@ export default function HeroSection() {
           heading="IRI Video"
           subheading="a proffessional video maker"
           btnText="Contact"
+          btnLink="/contact"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
             provident quod! Velit ullam temporibus quae fugiat, nemo est,
             pariatur veniam molestias ad vitae, sunt maiores voluptatem

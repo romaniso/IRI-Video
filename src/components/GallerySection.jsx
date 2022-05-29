@@ -6,11 +6,14 @@ import data from "../assets/data/galleryRefs";
 import Player from "./Player";
 
 const GallerySectionStyles = styled.div`
-  padding-top: 15rem;
-  background: var(--dark-bg);
+  padding: 15rem 0;
+  background: #13070ce5;
   text-align: center;
 
   .gallery__content {
+    border-top: 2px solid #aa915b75;
+    margin-top: 5rem;
+    padding-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
