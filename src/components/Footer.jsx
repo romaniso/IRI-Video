@@ -39,7 +39,6 @@ const FooterStyles = styled.div`
       }
 
       .title {
-        color: var(--highlight);
         font-size: 3.5rem;
         margin-bottom: 1rem;
       }

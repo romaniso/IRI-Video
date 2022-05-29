@@ -33,7 +33,7 @@ const ServicesSectionStyles = styled.div`
 
 export default function ServicesSection() {
   return (
-    <ServicesSectionStyles className="container">
+    <ServicesSectionStyles className="container services__section">
       <div className="wrapper">
         <TitleSection heading="Services" subheading="What I offer" />
         <div className="services">

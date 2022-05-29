@@ -35,7 +35,8 @@ const Typography = createGlobalStyle`
   }
   h1,h2,h3,h4,h5,h6{
     font-family: 'Prata Regular';
-    color: var(--highlight)
+    color: var(--highlight);
+    letter-spacing: 2.5px;
   }
 `;
 
