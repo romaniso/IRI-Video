@@ -34,7 +34,8 @@ const Typography = createGlobalStyle`
     // color: var(--gray-1);
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'Parisienne Regular'
+    font-family: 'Prata Regular';
+    color: var(--highlight)
   }
 `;
 
