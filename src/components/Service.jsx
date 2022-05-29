@@ -18,6 +18,7 @@ const ServiceStyles = styled.div`
   .title {
     font-size: 2.6rem;
     color: var(--light);
+    opacity: 0.8;
     text-transform: capitalize;
   }
 

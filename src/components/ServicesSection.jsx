@@ -5,11 +5,13 @@ import Service from "./Service";
 import { MdOutlineVideoSettings, MdOutlineVideocam } from "react-icons/md";
 import { RiFilmFill } from "react-icons/ri";
 const ServicesSectionStyles = styled.div`
-  margin: 15rem auto;
   text-align: center;
+  .wrapper {
+    margin: 15rem auto;
+  }
 
   .services {
-    margin-top: 5rem;
+    padding-top: 5rem;
     padding: 7rem 3rem;
     display: flex;
     justify-content: center;
@@ -32,23 +34,25 @@ const ServicesSectionStyles = styled.div`
 export default function ServicesSection() {
   return (
     <ServicesSectionStyles className="container">
-      <TitleSection heading="Services" subheading="What I offer" />
-      <div className="services">
-        <Service
-          title="video editing"
-          icon={<MdOutlineVideoSettings />}
-          des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
-        />
-        <Service
-          title="Film production"
-          icon={<MdOutlineVideocam />}
-          des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
-        />
-        <Service
-          title="Direction"
-          icon={<RiFilmFill />}
-          des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
-        />
+      <div className="wrapper">
+        <TitleSection heading="Services" subheading="What I offer" />
+        <div className="services">
+          <Service
+            title="video editing"
+            icon={<MdOutlineVideoSettings />}
+            des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
+          />
+          <Service
+            title="Film production"
+            icon={<MdOutlineVideocam />}
+            des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
+          />
+          <Service
+            title="Direction"
+            icon={<RiFilmFill />}
+            des="I will edit your films and clips so they look like wonderful and eye-catching. If you are a YouTuber or a musician who wants to show up, You are in the right place!"
+          />
+        </div>
       </div>
     </ServicesSectionStyles>
   );

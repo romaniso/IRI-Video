@@ -25,12 +25,12 @@ const NavBarStyles = styled.nav`
     width: 4rem;
 
     &:hover path {
-      color: white;
+      color: var(--light);
     }
 
     path {
       transition: 0.3s ease-in;
-      color: var(--light);
+      color: var(--highlight);
     }
 
     * {
@@ -46,7 +46,7 @@ const NavBarStyles = styled.nav`
     top: 3rem;
     width: 4rem;
     &:hover path {
-      color: white;
+      color: var(--light);
     }
 
     &.hidden {
@@ -54,7 +54,7 @@ const NavBarStyles = styled.nav`
     }
     path {
       transition: 0.3s ease-in;
-      color: var(--light);
+      color: var(--highlight);
     }
     * {
       pointer-events: none;
