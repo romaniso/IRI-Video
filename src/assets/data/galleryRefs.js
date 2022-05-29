@@ -6,7 +6,7 @@ const galleryRefs = [
     title: "Piccola a fragile -Frank Onorati",
     source: {
       type: "video/youtube",
-      src: "https://youtu.be/ed2z3UlUTXY",
+      src: "https://www.youtube.com/embed/ed2z3UlUTXY",
     },
   },
   {
@@ -14,7 +14,7 @@ const galleryRefs = [
     title: "Shallow -Franca Campoli a Frank Onorati",
     source: {
       type: "video/youtube",
-      src: "https://youtu.be/kcha9Q-I27Q",
+      src: "https://www.youtube.com/embed/kcha9Q-I27Q",
     },
   },
   {

@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import TitleSection from "./TitleSection";
+
 import data from "../assets/data/galleryRefs";
-import MediaElement from "./MediaElement";
+import Player from "./Player";
 
 const GallerySectionStyles = styled.div`
   padding-top: 15rem;
@@ -17,36 +18,17 @@ const GallerySectionStyles = styled.div`
 `;
 
 export default function GallerySection() {
-  const arr = [];
-  data.map((item) => arr.push(item.source));
-  console.log(arr);
-  const sources = arr,
-    config = {},
-    tracks = {};
-
   return (
     <GallerySectionStyles>
-      <TitleSection />
+      <TitleSection heading="My Works" subheading="what I do" />
       <div className="gallery__content">
-        {data.map((item, index) => (
+        {data.map((item) => (
           <div
             key={item.id}
             className="gallery__item"
-            // style={{ width: 500, height: 281 }}
+            style={{ width: 500, height: 281 }}
           >
-            <MediaElement
-              id={item.id}
-              index={index}
-              mediaType="video"
-              preload="none"
-              controls
-              width="500"
-              height="281"
-              poster=""
-              sources={JSON.stringify(sources)}
-              options={JSON.stringify(config)}
-              tracks={JSON.stringify(tracks)}
-            />
+            <Player src={item.source.src} />
           </div>
         ))}
       </div>
