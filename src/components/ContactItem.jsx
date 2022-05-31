@@ -14,6 +14,7 @@ const ContactItemStyles = styled.div`
   border-right: 2px solid var(--highlight);
 
   @media only screen and (max-width: 768px) {
+    margin: 0 2.5rem;
     max-width: 450px;
   }
   .icon {
