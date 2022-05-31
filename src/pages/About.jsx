@@ -101,7 +101,7 @@ export default function About() {
   return (
     <AboutPageStyles>
       <div className="video__wrapper">
-        <video autoPlay muted loop id="background-video">
+        <video autoPlay muted loop playsInline id="background-video">
           <source src={VideoBg} type="video/mp4" />
         </video>
       </div>

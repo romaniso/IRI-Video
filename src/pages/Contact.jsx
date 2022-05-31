@@ -53,7 +53,7 @@ export default function Contact() {
   return (
     <ContactPageStyles className="container">
       <div className="video__wrapper">
-        <video autoPlay muted loop id="background-video">
+        <video autoPlay muted loop playsInline id="background-video">
           <source src={VideoBg} type="video/mp4" />
         </video>
       </div>
