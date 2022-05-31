@@ -23,6 +23,7 @@ const NavBarStyles = styled.nav`
     right: 2.2rem;
     top: 3rem;
     width: 4rem;
+    color: var(--highlight);
 
     &:hover path {
       color: var(--light);
