@@ -11,22 +11,29 @@ SwiperCore.use([Navigation, Pagination]);
 const VideoCarouselStyles = styled.div`
   .player-wrapper {
     pointer-events: none;
-
-    @media only screen and (max-width: 768px) {
-      pointer-events: all;
-    }
   }
   .swiper {
     max-width: 90%;
     filter: brightness(50%);
     transition: filter 0.5s ease-in-out;
 
-    @media only screen and (max-width: 768px) {
+    &:hover {
       filter: none;
     }
 
-    &:hover {
-      filter: none;
+    .swiper-button-prev {
+      left: 2rem;
+    }
+
+    .swiper-button-next {
+      right: 2rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 3rem;
+      }
     }
 
     .swiper-button-prev,
@@ -34,6 +41,7 @@ const VideoCarouselStyles = styled.div`
       color: var(--highlight);
       top: 50%;
       transition: color 0.5s ease-in-out;
+
       &:hover {
         color: var(--light);
       }

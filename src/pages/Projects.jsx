@@ -23,7 +23,7 @@ const ProjectsPageStyles = styled.div`
 
     @media only screen and (max-width: 768px) {
       .project__video {
-        display: none;
+        /* display: none; */
       }
     }
 
