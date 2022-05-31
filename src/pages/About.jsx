@@ -23,7 +23,7 @@ const AboutPageStyles = styled.div`
   }
 
   position: relative;
-  padding: 10rem 0;
+  padding: 10rem 0 0;
   .top-section {
     border-left: 2px solid var(--highlight);
     display: flex;

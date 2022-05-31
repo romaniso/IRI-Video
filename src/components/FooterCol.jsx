@@ -20,7 +20,7 @@ const FooterColStyles = styled.div`
   }
 
   li a:hover {
-    color: var(--white);
+    color: var(--light);
   }
 `;
 

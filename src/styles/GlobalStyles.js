@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
   a{
     text-decoration: none;
   }
+
   img, svg{
     width: 100%;
     height: 100%;
@@ -45,7 +46,11 @@ const GlobalStyles = createGlobalStyle`
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     padding: 3rem 4rem;
+    transition: .5s ease-out;
+  }
 
+  .card:hover {
+    background: rgba(249, 249, 249, 0.1);
   }
 /* Smooth Scroll  */
   [data-scrollbar] {

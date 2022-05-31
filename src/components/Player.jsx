@@ -6,18 +6,17 @@ const PlayerStyles = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
-  padding: 1rem;
   transition: 0.5s ease-out;
+  padding: 1rem;
 
   &:hover {
     transform: scale(1.05);
-    filter: blur(0);
   }
 `;
 
 const Player = (props) => {
   const [clicked, setClicked] = useState(false);
-  const { src } = props;
+  const { src, light = true } = props;
 
   return (
     <PlayerStyles
@@ -30,7 +29,7 @@ const Player = (props) => {
         width="100%"
         height="100%"
         controls={true}
-        light={true}
+        light={light}
       />
     </PlayerStyles>
   );

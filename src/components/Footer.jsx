@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo-2.png";
 import DescriptionSection from "./DescriptionSection";
 import styled from "styled-components";
 import FooterCol from "./FooterCol";

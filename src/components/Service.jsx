@@ -5,10 +5,6 @@ import styled from "styled-components";
 const ServiceStyles = styled.div`
   max-width: 350px;
   padding: 2rem 3rem;
-  background: rgba(249, 249, 249, 0.042);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
   border-top: 2px solid var(--highlight);
   svg {
     width: 4rem;
@@ -45,7 +41,7 @@ export default function Service({
   des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum placeat incidunt delectus commodi laborum culpa at, nulla voluptate quos beatae magnam qui esse dicta dignissimos amet quisquam! Pariatur, hic?",
 }) {
   return (
-    <ServiceStyles className="service">
+    <ServiceStyles className="service card">
       <div className="icon">{icon}</div>
       <div className="title">{title}</div>
       <DescriptionSection>{des}</DescriptionSection>
