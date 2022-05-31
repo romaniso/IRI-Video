@@ -6,6 +6,7 @@ import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
 const HeroSectionStyles = styled.div`
   .video__wrapper {
+    background-image: url(../assets/images/background-img.jpg);
     position: fixed;
     top: 0;
     z-index: -999;

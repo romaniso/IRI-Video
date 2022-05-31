@@ -8,6 +8,7 @@ import VideoBg from "../assets/videos/background.mp4";
 
 const AboutPageStyles = styled.div`
   .video__wrapper {
+    pointer-events: none;
     position: fixed;
     top: 0;
     z-index: -999;
@@ -23,7 +24,7 @@ const AboutPageStyles = styled.div`
   }
 
   position: relative;
-  padding: 10rem 0 0;
+  padding: 5rem 0 0;
   .top-section {
     border-left: 2px solid var(--highlight);
     display: flex;
