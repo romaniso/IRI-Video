@@ -1,5 +1,5 @@
 ![This is a banner!](/src/assets/images/readme/banner.png)
-# IRI Video ![This is a logo!](/src/assets/images/logo-2.png)
+# IRI Video ![This is a logo!](/src/assets/images/readme/logo-sm.png)
 
 **[IRI Video](https://iri-video-roma.netlify.app/)** is a **React** based webpage for a video-maker. This project was developed as a business card for a video-maker from Italy to show her works. One can browse all projects here visiting gallery section of this project. This webpage can provide you the information about video-maker's background and skills. The project is developed by creating several React components, mainly functional, using React useState hooks for transfering info from a components to other components. For styling, I have chosen *SASS* technology using **styled components external** library to implement it in the code.
 
