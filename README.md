@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+![This is a banner!](/src/assets/images/readme/banner.png)
+# IRI Video ![This is a logo!](/src/assets/images/logo-2.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**[IRI Video](https://iri-video-roma.netlify.app/)** is a **React** based webpage for a video-maker. This project was developed as a business card for a video-maker from Italy to show her works. One can browse all projects here visiting gallery section of this project. This webpage can provide you the information about video-maker's background and skills. The project is developed by creating several React components, mainly functional, using React useState hooks for transfering info from a components to other components. For styling, I have chosen *SASS* technology using **styled components external** library to implement it in the code.
 
-## Available Scripts
+![This is my portfolio!](/src/assets/images/readme/project-img.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## External libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is based on several external libraries that have provided some additional functionality for user interface. Since the webpage is developed with React, it allows to use external sources to elaborate the technology of a project. Here is a list of libs that I was using creating my portfolio **[IRI Video](https://iri-video-roma.netlify.app/)** :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React Router Dom
+- React Icons
+- React Player
+- Uuid
+- SwiperJS
+- Styled Components
 
-### `npm test`
+![My dependencies list](/src/assets/images/readme/dependencies.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### React Router Dom
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As far as first position from the list is concerned, I have used **React Router Dom**. Thanks to this library, I've managed to create a webpage that doesn't require a repeated reloading of each page which means that the client-server request is reduced. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![The example of using React Router in my project](/src/assets/images/readme/router.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+--- 
 
-### `npm run eject`
+### React Icons 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For all the icons I have used another React-based library - **React Icons**. There is a wide range of various icons that a developer can use in any React project. Coding socials section, I have used all icons from this library. When it comes to styling, one should refer to *svg* and also *path* elements of React icons to attach them and, for instance, apply hover effects.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### React Player
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Developing Gallery Section, I encoutered the following issue: not to overload the size of this project, I needed to omit uploading entire video files for creating a video gallery, so I decided to use external references to the video-maker's YouYube channel. I discovered **React Player** library that helped me to implement this plan and to style video controls, size of each video, etc. Also, I used it while creating VideoCarousel Component.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Uuid
 
-### Code Splitting
+To store all video projects in a single place I needed a data file, so I decided to create a projects  file that contains all info about the video-maker's works. But to properly map this data, I needed to attach each item with a unique key, so that's why I used **Uuid** library. This tool allowed me to generate random ids, so I could use them mapping projects object into separated elements in *virtual DOM* generated by React environment. Here are some examples of using **Uuid** lib:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![The example of using Uuid in my project](/src/assets/images/readme/uuid.png)
 
-### Analyzing the Bundle Size
+--- 
+ 
+### SwiperJS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Since there is a projects section on the Projects Page, I needed to style it in a user-friendly way, so every visitor could assess and glance the videos instantly, without jumping from one page to another page. So, I decided to develop a swiper from a external library **SwiperJS**. This tool allowed me to create a nice-looking and plain swiper for Video Carousel Components. 
 
-### Making a Progressive Web App
+![The example of using SwiperJS in my project](/src/assets/images/readme/swiper.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### Styled Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For styles I used **Styled Components** library, so it helped me minimalise the code and embed styles, logic and the structure of all React components in one place. Also, this tool features all benefits of using SASS instead of a plain CSS with nesting, variables, etc. Here is an example from the code: 
 
-### Deployment
+![The example of using SwiperJS in my project](/src/assets/images/readme/styled-components.pngg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Here are the links to my portfolio:**
+
+You can check it out live - **<https://iri-video-roma.netlify.app/projects>**
+or look into the code here on GitHub - **<https://github.com/romaniso/iri_production>**
+
