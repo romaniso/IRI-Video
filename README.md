@@ -38,7 +38,7 @@ For all the icons I have used another React-based library - **React Icons**. The
 
 ### React Player
 
-Developing Gallery Section, I encoutered the following issue: not to overload the size of this project, I needed to omit uploading entire video files for creating a video gallery, so I decided to use external references to the video-maker's YouYube channel. I discovered **React Player** library that helped me to implement this plan and to style video controls, size of each video, etc. Also, I used it while creating VideoCarousel Component.
+Developing Gallery Section, I encountered the following issue: not to overload the size of this project, I needed to omit uploading entire video files for creating a video gallery, so I decided to use external references to the video-maker's YouYube channel. I discovered **React Player** library that helped me to implement this plan and to style video controls, size of each video, etc. Also, I used it while creating VideoCarousel Component.
 
 ---
 
@@ -53,7 +53,7 @@ To store all video projects in a single place I needed a data file, so I decided
  
 ### SwiperJS
 
-Since there is a projects section on the Projects Page, I needed to style it in a user-friendly way, so every visitor could assess and glance the videos instantly, without jumping from one page to another page. So, I decided to develop a swiper from a external library **SwiperJS**. This tool allowed me to create a nice-looking and plain swiper for Video Carousel Components. 
+Since there is a projects section on the Projects Page, I needed to style it in a user-friendly way, so every visitor could assess and glance the videos instantly, without jumping from one page to another page. So, I decided to develop a swiper from an external library **SwiperJS**. This tool allowed me to create a nice-looking and plain swiper for Video Carousel Components. 
 
 ![The example of using SwiperJS in my project](/src/assets/images/readme/swiper.png)
 
@@ -61,9 +61,9 @@ Since there is a projects section on the Projects Page, I needed to style it in 
 
 ### Styled Components
 
-For styles I used **Styled Components** library, so it helped me minimalise the code and embed styles, logic and the structure of all React components in one place. Also, this tool features all benefits of using SASS instead of a plain CSS with nesting, variables, etc. Here is an example from the code: 
+For styles I used **Styled Components** library, so it helped me minimalize the code and embed styles, logic and the structure of all React components in one place. Also, this tool features all benefits of using SASS instead of a plain CSS with nesting, variables, etc. Here is an example from the code: 
 
-![The example of using SwiperJS in my project](/src/assets/images/readme/styled-components.pngg)
+![The example of using Styled Components in my project](/src/assets/images/readme/styled-components.png)
 
 ---
 
