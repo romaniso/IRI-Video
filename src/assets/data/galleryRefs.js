@@ -82,6 +82,69 @@ const galleryRefs = [
       src: "https://www.youtube.com/embed/FHA3QmtHbfo",
     },
   },
+  {
+    id: uuidv4(),
+    title: `Amalfi`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=2Moin2YIV2g&t=166s&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `kkk vsem`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=f_5A6rkstiY&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `koncert izola tiberina Paolo Vivaldi`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=6UaAYwJzeII&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `ponza 2022`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=0gv7Saf0ivQ&t=17s&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `apartamento mare`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=6SLh3_HtllE&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `casa in montagna`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=w6wa7fEPT1M&ab_channel=IRIProductionRoma",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: `ostia casa`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=u1CSaCL1E0k&ab_channel=IRIProductionRoma",
+    },
+  },
 ];
 
 export default galleryRefs;

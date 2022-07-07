@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LogoImg from "../assets/images/logo-2.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
@@ -163,9 +163,9 @@ export default function NavBar() {
 
   return (
     <NavBarStyles>
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={LogoImg} alt="logo" />
-      </div>
+      </Link>
       <div
         className={showNavBar ? "menu hidden" : "menu"}
         onClick={() => setShowNavBar(!showNavBar)}
