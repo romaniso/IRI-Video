@@ -19,7 +19,7 @@ const ContactBannerStyles = styled.div`
     border-left: 2px solid var(--highlight);
 
     .logo {
-      width: 100px;
+      width: 130px;
     }
   }
   p {

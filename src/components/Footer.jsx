@@ -33,7 +33,7 @@ const FooterStyles = styled.div`
       flex: 3;
 
       .logo img {
-        max-width: 90px;
+        max-width: 110px;
         margin-right: 1rem;
         transform: translate(0, 30%);
       }
@@ -71,7 +71,7 @@ export default function Footer() {
             <span className="logo">
               <img src={logo} alt="logo" />
             </span>
-            IRI Video
+            IRI Zinchenko
           </h1>
           <DescriptionSection>
             A passionate video-maker from Rome, Italy. Video production is my
@@ -95,8 +95,8 @@ export default function Footer() {
             links={[
               { title: "+39 328 617 1688", path: "tel:+393286171688" },
               {
-                title: "iri.production.roma@gmail.com",
-                path: "mailto:iri.production.roma@gmail.com",
+                title: "iri.zinchenko.roma@gmail.com",
+                path: "mailto:iri.zinchenko.roma@gmail.com",
               },
               {
                 title: "IRI Video, Rome, Italy",
@@ -128,7 +128,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <DescriptionSection>&copy; 2022 - IRI Video</DescriptionSection>
+          <DescriptionSection>&copy; 2022 - IRI Zinchenko</DescriptionSection>
         </div>
       </div>
     </FooterStyles>

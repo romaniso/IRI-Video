@@ -62,7 +62,7 @@ export default function Contact() {
         <ContactItem icon={<AiFillPhone />} text="+39 328 617 1688" />
         <ContactItem
           icon={<AiTwotoneMail />}
-          text="iri.production.roma@gmail.com"
+          text="iri.zinchenko.roma@gmail.com"
         />
         <ContactItem text="Rome, Lazio, Italy" />
       </div>

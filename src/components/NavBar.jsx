@@ -12,7 +12,7 @@ const NavBarStyles = styled.nav`
   border-bottom: 2px solid #aa915b75;
 
   .logo {
-    width: 90px;
+    width: 120px;
     margin-bottom: 1rem;
   }
 

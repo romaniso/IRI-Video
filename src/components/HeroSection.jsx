@@ -80,7 +80,7 @@ export default function HeroSection() {
       </div>
       <div className="container">
         <Card
-          heading="IRI Video"
+          heading="IRI Zinchenko"
           subheading="a proffessional video maker"
           btnText="Contact"
           btnLink="/contact"
