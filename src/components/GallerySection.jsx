@@ -21,6 +21,9 @@ const GallerySectionStyles = styled.div`
 `;
 
 export default function GallerySection() {
+  const videoWidth = 500;
+  const videoHeight = 281;
+  const imageRatio = videoWidth / videoHeight;
   return (
     <GallerySectionStyles>
       <TitleSection heading="My Works" subheading="what I do" />
@@ -29,7 +32,7 @@ export default function GallerySection() {
           <div
             key={item.id}
             className="gallery__item"
-            style={{ width: 500, height: 281 }}
+            style={{ width: videoWidth, height: videoHeight }}
           >
             <Player src={item.source.src} />
           </div>
