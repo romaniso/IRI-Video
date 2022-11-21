@@ -3,6 +3,161 @@ import { v4 as uuidv4 } from "uuid";
 const galleryRefs = [
   {
     id: uuidv4(),
+    title: "Diverso Saloni - Roma Tiburtina Part 1",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=HSHHgAGE4Fc&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Diverso Saloni - Roma Tiburtina Part 2",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=mcR8UEFrWrQ&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Titanic by Franca",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=Jt-Cdfz3Jck&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Bella Olga",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=ni-OECxQiiE&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Fiera di sposa",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=isn4OMrESTI&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Energy Club - Palestra",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=kQk8dgEOjQg&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "VIDEO CON LA dron Part 3",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=XZlnaongDZc&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "VIDEO CON LA DRONE",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=s4yBssN_QHo&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Wedding",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=q7a8u60Qucs&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Diverso saloni Part 2",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=gHBVNgZLUyw&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Diverso saloni",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=kmGAhrEyE98&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Franca",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=r4Y_QGI0ZmE&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "La natura, liberta a amore",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=26QHrDpnsYs&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title:
+      "Concerto eseguito da Paolo Vivaldi e musicisti di gran talento nell'antico luogo del Colosseo part 2",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=oTZHQ2oI8qY&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title:
+      "Uno splendido concerto eseguito da Paolo Vivaldi e musicisti di grande talento del Colosseo",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=dptZEZgSebA&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Natale in fiore a Roma",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=z4bCqgWeLoo&t=12s&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
+    title: "Kitesurfing - Solo grandi emozioni Parte 4",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/watch?v=yMxfxPmqKDI&ab_channel=IRIZinchenko",
+    },
+  },
+  {
+    id: uuidv4(),
     title:
       "Frank Onorati - Piccola a fragile (cover) Video di Irina Zinchenko 🎬",
     des: "Frank Onorati - Piccola a fragile (cover)…",
