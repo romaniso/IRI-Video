@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background.mp4";
+import VideoBgWebm from "../assets/videos/background.webm";
+import VideoPoster from "../assets/images/poster.jpg";
 import Card from "./Card";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
@@ -10,6 +12,7 @@ const HeroSectionStyles = styled.div`
     background-image: url(../assets/images/background-img.jpg);
     position: fixed;
     top: 0;
+    left: 0;
     z-index: -999;
     width: 100%;
     height: 100%;
@@ -82,7 +85,16 @@ export default function HeroSection() {
   return (
     <HeroSectionStyles>
       <div className="video__wrapper">
-        <video autoPlay muted loop playsInline id="background-video">
+        <video
+          poster={VideoPoster}
+          autoPlay
+          muted
+          loop
+          preload="auto"
+          playsInline
+          id="background-video"
+        >
+          <source src={VideoBgWebm} type="video/webm" />
           <source src={VideoBg} type="video/mp4" />
         </video>
       </div>
