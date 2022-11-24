@@ -23,23 +23,35 @@ const HeroSectionStyles = styled.div`
   }
 
   .container {
+    padding-top: 180px;
+    padding-bottom: 100px;
     height: calc(100vh - 120px); //minus the height of navbar
     position: relative;
-    #card {
-      position: absolute;
-      bottom: 50%;
-      transform: translate(-0%, 50%);
+    @media only screen and (max-width: 940px) {
+      padding-top: 100px;
+    }
+
+    .hero-section__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 5rem;
+      @media only screen and (max-width: 940px) {
+        flex-direction: column;
+      }
     }
     .socials {
-      position: absolute;
-      bottom: 50%;
-      right: 0;
       display: flex;
       flex-direction: column;
-      transform: translateY(50%);
+      column-gap: 2rem;
+      row-gap: 1.8rem;
+      @media only screen and (max-width: 940px) {
+        flex-direction: row;
+        align-self: flex-end;
+      }
 
       svg {
-        margin: 2rem 0;
         color: var(--highlight);
         opacity: calc(0.8);
         width: 45px;
@@ -61,10 +73,6 @@ const HeroSectionStyles = styled.div`
       .socials {
         display: flex;
         flex-direction: row;
-        bottom: 3rem;
-        svg {
-          margin: 0 0.5rem;
-        }
       }
     }
   }
@@ -72,45 +80,45 @@ const HeroSectionStyles = styled.div`
 
 export default function HeroSection() {
   return (
-    <HeroSectionStyles className="heroSection__wrapper">
+    <HeroSectionStyles>
       <div className="video__wrapper">
         <video autoPlay muted loop playsInline id="background-video">
           <source src={VideoBg} type="video/mp4" />
         </video>
       </div>
       <div className="container">
-        <Card
-          heading="IRI Zinchenko"
-          subheading="a proffessional video maker"
-          btnText="Contact"
-          btnLink="/contact"
-          description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-            provident quod! Velit ullam temporibus quae fugiat, nemo est,
-            pariatur veniam molestias ad vitae, sunt maiores voluptatem
-            architecto neque sit."
-        />
-        <div className="socials">
-          <a
-            href="https://www.youtube.com/channel/UC7KJVvlAbiof1jEAX35VWZg"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillYoutube />
-          </a>
-          <a
-            href="https://www.facebook.com/IRI-Production-Roma-101611189020712"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillFacebook />
-          </a>
-          <a
-            href="https://www.instagram.com/iri_production_/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillInstagram />
-          </a>
+        <div className="hero-section__content">
+          <Card
+            heading="IRI Zinchenko"
+            subheading="a proffessional video maker"
+            btnText="Contact"
+            btnLink="/contact"
+            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
+            provident quod! Velit ullam temporibus quae fugiat"
+          />
+          <div className="socials">
+            <a
+              href="https://www.youtube.com/channel/UC7KJVvlAbiof1jEAX35VWZg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillYoutube />
+            </a>
+            <a
+              href="https://www.facebook.com/IRI-Production-Roma-101611189020712"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/iri_production_/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillInstagram />
+            </a>
+          </div>
         </div>
       </div>
     </HeroSectionStyles>

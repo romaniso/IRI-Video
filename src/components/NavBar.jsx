@@ -22,7 +22,7 @@ const NavBarStyles = styled.nav`
     position: absolute;
     right: 2.2rem;
     top: 3rem;
-    width: 4rem;
+    width: 3.5rem;
     color: var(--highlight);
 
     &:hover path {
@@ -87,7 +87,8 @@ const NavBarStyles = styled.nav`
         display: block;
         color: var(--highlight);
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
 
         &.active {
           color: var(--light);

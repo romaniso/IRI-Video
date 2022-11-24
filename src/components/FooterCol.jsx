@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const FooterColStyles = styled.div`
   h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 
@@ -13,10 +13,16 @@ const FooterColStyles = styled.div`
   }
 
   li a {
+    /* Dark mode */
     color: var(--highlight);
+
+    /* Light mode */
+    /*color: #12080e;*/
     opacity: 0.8;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     transition: 0.5s color;
+    letter-spacing: 0.2rem;
+    /*font-weight: 700;*/
   }
 
   li a:hover {

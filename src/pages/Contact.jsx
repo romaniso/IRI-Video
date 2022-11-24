@@ -3,7 +3,13 @@ import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
 import VideoBg from "../assets/videos/background.mp4";
 import ContactItem from "../components/ContactItem";
-import { AiFillPhone, AiTwotoneMail } from "react-icons/ai";
+import {
+  AiFillPhone,
+  AiTwotoneMail,
+  AiFillFacebook,
+  AiFillYoutube,
+  AiFillInstagram,
+} from "react-icons/ai";
 
 const ContactPageStyles = styled.div`
   .video__wrapper {
@@ -22,7 +28,7 @@ const ContactPageStyles = styled.div`
     }
   }
 
-  padding-top: 5rem;
+  padding-top: 7rem;
   text-align: center;
 
   .contact__section {
@@ -30,8 +36,10 @@ const ContactPageStyles = styled.div`
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
-    flex-direction: column;
-    gap: 5rem;
+    /*flex-direction: column;*/
+    column-gap: 5rem;
+    row-gap: 5rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -65,6 +73,9 @@ export default function Contact() {
           text="iri.zinchenko.roma@gmail.com"
         />
         <ContactItem text="Rome, Lazio, Italy" />
+        <ContactItem icon={<AiFillFacebook />} text="Facebook" />
+        <ContactItem icon={<AiFillYoutube />} text="YouTube" />
+        <ContactItem icon={<AiFillInstagram />} text="Instagram" />
       </div>
     </ContactPageStyles>
   );

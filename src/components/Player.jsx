@@ -29,6 +29,7 @@ const Player = (props) => {
         width="100%"
         height="100%"
         controls={true}
+        playing={true}
         light={light}
       />
     </PlayerStyles>

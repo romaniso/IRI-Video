@@ -16,6 +16,9 @@ const CardStyles = styled.div`
     padding: 2rem 3rem;
     max-width: 450px;
   }
+  @media only screen and (max-width: 425px) {
+    max-width: 300px;
+  }
 `;
 
 export default function Card({
