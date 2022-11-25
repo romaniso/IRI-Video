@@ -1,10 +1,31 @@
 import { v4 as uuidv4 } from "uuid";
 
+//GIFS for video thumbnails
+import DiversoSaloni from "../images/gifs/Diverso Saloni - Roma Tiburtina.gif";
+import BellaOlga from "../images/gifs/Bella Olga.gif";
+//import DiversoSaloni2 from "../images/gifs/Diverso Saloni - Roma Tiburtina Part 2.gif";
+import DiversoSaloni3 from "../images/gifs/Diverso Saloni - Roma Tiburtina Part 3.gif";
+import EnergyClubPalestra from "../images/gifs/Energy Club - Palestra.gif";
+import FieraDiSposa from "../images/gifs/Fiera di sposa.gif";
+import TitanicByFranca from "../images/gifs/Titanic by Franca.gif";
+import VideoConLaDrone from "../images/gifs/VIDEO CON LA DRONE 1.gif";
+import VideoConLaDrone3 from "../images/gifs/VIDEO CON LA dron Part 3.gif";
+import Wedding from "../images/gifs/Wedding.gif";
+//import DiversoSaloni2 from "../images/gifs/Diverso saloni Part 2.gif";
+import PiccolaAFragile from "../images/gifs/Piccola a fragile.gif";
+import NataleInFioreARoma from "../images/gifs/Natale in fiore a Roma.gif";
+import Franca from "../images/gifs/Franca.gif";
+import LaNatura from "../images/gifs/La natura, liberta a amore.gif";
+import NotreDameDeParis from "../images/gifs/NotreDameDeParis.gif";
+import Concerto from "../images/gifs/concerto.gif";
+import ArtEvent from "../images/gifs/ArtEvent.gif";
+
 const galleryRefs = [
   {
     id: uuidv4(),
     title: "Diverso Saloni - Roma Tiburtina",
     des: "",
+    gif: DiversoSaloni,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/ImZwWtOJL-Q",
@@ -12,26 +33,30 @@ const galleryRefs = [
   },
   {
     id: uuidv4(),
-    title: "Diverso Saloni - Roma Tiburtina Part 2",
-    des: "",
+    title: `Art Event`,
+    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
+    gif: ArtEvent,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/HSHHgAGE4Fc",
+      src: "https://www.youtube.com/embed/f_5A6rkstiY",
     },
   },
+
   {
     id: uuidv4(),
-    title: "Diverso Saloni - Roma Tiburtina Part 3",
-    des: "",
+    title: `“Omaggio al musical ''Notre Dame de Paris'' di Riccardo Cocciante. Bella - Frank Onorati (cover)`,
+    des: "🎥 Video a cura di Iryna Zinchenko in collaborazione con Gianmarco Costa e Alfredo Longo.",
+    gif: NotreDameDeParis,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/mcR8UEFrWrQ",
+      src: "https://www.youtube.com/embed/VrBAKInGJC0",
     },
   },
   {
     id: uuidv4(),
     title: "Titanic by Franca",
     des: "",
+    gif: TitanicByFranca,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/Jt-Cdfz3Jck",
@@ -41,6 +66,7 @@ const galleryRefs = [
     id: uuidv4(),
     title: "Bella Olga",
     des: "",
+    gif: BellaOlga,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/ni-OECxQiiE",
@@ -48,16 +74,20 @@ const galleryRefs = [
   },
   {
     id: uuidv4(),
-    title: "Fiera di sposa",
-    des: "",
+    title:
+      "Frank Onorati - Piccola a fragile (cover) Video di Irina Zinchenko 🎬",
+    des: "Frank Onorati - Piccola a fragile (cover)…",
+    gif: PiccolaAFragile,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/isn4OMrESTI",
+      src: "https://www.youtube.com/embed/ed2z3UlUTXY",
     },
   },
+
   {
     id: uuidv4(),
     title: "Energy Club - Palestra",
+    gif: EnergyClubPalestra,
     des: "",
     source: {
       type: "video/youtube",
@@ -67,6 +97,7 @@ const galleryRefs = [
   {
     id: uuidv4(),
     title: "VIDEO CON LA dron Part 3",
+    gif: VideoConLaDrone3,
     des: "",
     source: {
       type: "video/youtube",
@@ -77,6 +108,7 @@ const galleryRefs = [
     id: uuidv4(),
     title: "VIDEO CON LA DRONE",
     des: "",
+    gif: VideoConLaDrone,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/s4yBssN_QHo",
@@ -86,6 +118,7 @@ const galleryRefs = [
     id: uuidv4(),
     title: "Wedding",
     des: "",
+    gif: Wedding,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/q7a8u60Qucs",
@@ -93,26 +126,30 @@ const galleryRefs = [
   },
   {
     id: uuidv4(),
-    title: "Diverso saloni Part 2",
+    title: "Fiera di sposa",
     des: "",
+    gif: FieraDiSposa,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/gHBVNgZLUyw",
+      src: "https://www.youtube.com/embed/isn4OMrESTI",
     },
   },
   {
     id: uuidv4(),
-    title: "Diverso saloni",
+    title: "Natale in fiore a Roma",
     des: "",
+    gif: NataleInFioreARoma,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/kmGAhrEyE98",
+      src: "https://www.youtube.com/embed/z4bCqgWeLoo",
     },
   },
+
   {
     id: uuidv4(),
     title: "Franca",
     des: "",
+    gif: Franca,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/r4Y_QGI0ZmE",
@@ -122,6 +159,7 @@ const galleryRefs = [
     id: uuidv4(),
     title: "La natura, liberta a amore",
     des: "",
+    gif: LaNatura,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/26QHrDpnsYs",
@@ -129,12 +167,12 @@ const galleryRefs = [
   },
   {
     id: uuidv4(),
-    title:
-      "Concerto eseguito da Paolo Vivaldi e musicisti di gran talento nell'antico luogo del Colosseo part 2",
+    title: "Diverso Saloni - Roma Tiburtina Part 3",
     des: "",
+    gif: DiversoSaloni3,
     source: {
       type: "video/youtube",
-      src: "https://www.youtube.com/embed/oTZHQ2oI8qY",
+      src: "https://www.youtube.com/embed/mcR8UEFrWrQ",
     },
   },
   {
@@ -142,6 +180,7 @@ const galleryRefs = [
     title:
       "Uno splendido concerto eseguito da Paolo Vivaldi e musicisti di grande talento del Colosseo",
     des: "",
+    gif: Concerto,
     source: {
       type: "video/youtube",
       src: "https://www.youtube.com/embed/dptZEZgSebA",
@@ -149,11 +188,31 @@ const galleryRefs = [
   },
   //  {
   //    id: uuidv4(),
-  //    title: "Natale in fiore a Roma",
+  //    title: "Diverso Saloni - Roma Tiburtina Part 2",
+  //    des: "",
+  //    gif: DiversoSaloni2,
+  //    source: {
+  //      type: "video/youtube",
+  //      src: "https://www.youtube.com/embed/HSHHgAGE4Fc",
+  //    },
+  //  },
+  // {
+  //    id: uuidv4(),
+  //    title:
+  //      "Concerto eseguito da Paolo Vivaldi e musicisti di gran talento nell'antico luogo del Colosseo part 2",
   //    des: "",
   //    source: {
   //      type: "video/youtube",
-  //      src: "https://www.youtube.com/embed/z4bCqgWeLoo",
+  //      src: "https://www.youtube.com/embed/oTZHQ2oI8qY",
+  //    },
+  //  },
+  //  {
+  //    id: uuidv4(),
+  //    title: "Diverso saloni",
+  //    des: "",
+  //    source: {
+  //      type: "video/youtube",
+  //      src: "https://www.youtube.com/embed/kmGAhrEyE98",
   //    },
   //  },
   //  {
@@ -165,16 +224,7 @@ const galleryRefs = [
   //      src: "https://www.youtube.com/embed/yMxfxPmqKDI",
   //    },
   //  },
-  //  {
-  //    id: uuidv4(),
-  //    title:
-  //      "Frank Onorati - Piccola a fragile (cover) Video di Irina Zinchenko 🎬",
-  //    des: "Frank Onorati - Piccola a fragile (cover)…",
-  //    source: {
-  //      type: "video/youtube",
-  //      src: "https://www.youtube.com/embed/ed2z3UlUTXY",
-  //    },
-  //  },
+
   //  {
   //    id: uuidv4(),
   //    title: "Frank Onorati e Franca Campoli - Shallow (cover) 😍…",
@@ -202,15 +252,7 @@ const galleryRefs = [
   //      src: "https://www.youtube.com/embed/ihfDk4M4-sk",
   //    },
   //  },
-  //  {
-  //    id: uuidv4(),
-  //    title: `“Omaggio al musical ''Notre Dame de Paris'' di Riccardo Cocciante. Bella - Frank Onorati (cover)`,
-  //    des: "🎥 Video a cura di Iryna Zinchenko in collaborazione con Gianmarco Costa e Alfredo Longo.",
-  //    source: {
-  //      type: "video/youtube",
-  //      src: "https://www.youtube.com/embed/VrBAKInGJC0",
-  //    },
-  //  },
+
   //  {
   //    id: uuidv4(),
   //    title: `La porta aperta Frank e Masa`,
@@ -256,15 +298,7 @@ const galleryRefs = [
   //      src: "https://www.youtube.com/embed/2Moin2YIV2g",
   //    },
   //  },
-  //  {
-  //    id: uuidv4(),
-  //    title: `kkk vsem`,
-  //    des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi tempore dolorem explicabo veritatis architecto, quidem quibusdam soluta id, corrupti excepturi unde veniam. Officia quae similique reiciendis, illo rerum dolorum eum.",
-  //    source: {
-  //      type: "video/youtube",
-  //      src: "https://www.youtube.com/embed/f_5A6rkstiY",
-  //    },
-  //  },
+
   //  {
   //    id: uuidv4(),
   //    title: `koncert izola tiberina Paolo Vivaldi`,

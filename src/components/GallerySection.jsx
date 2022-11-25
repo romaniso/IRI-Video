@@ -33,7 +33,7 @@ export default function GallerySection() {
         <div className="containerr">
           <div className="gallery__content">
             {data.map((item) => (
-              <Player src={item.source.src} />
+              <Player src={item.source.src} gif={item.gif} />
             ))}
           </div>
         </div>
