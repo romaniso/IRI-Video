@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background.mp4";
-import VideoBgWebm from "../assets/videos/background.webm";
-import VideoPoster from "../assets/images/poster.jpg";
+//import VideoBgWebm from "../assets/videos/background.webm";
+//import VideoPoster from "../assets/images/poster.jpg";
 import Card from "./Card";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
