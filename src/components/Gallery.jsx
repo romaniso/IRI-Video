@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ReactPlayer from "react-player";
+//import React, { useState } from "react";
+//import ReactPlayer from "react-player";
 import styled from "styled-components";
 
 const GalleryStyles = styled.div`
