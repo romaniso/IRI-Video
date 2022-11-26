@@ -85,7 +85,10 @@ export default function HeroSection() {
   return (
     <HeroSectionStyles>
       <div className="video__wrapper">
-        <video
+        <video autoPlay muted loop playsInline id="background-video">
+          <source src={VideoBg} type="video/mp4" />
+        </video>
+        {/*<video
           poster={VideoPoster}
           autoPlay
           muted
@@ -96,7 +99,7 @@ export default function HeroSection() {
         >
           <source src={VideoBgWebm} type="video/webm" />
           <source src={VideoBg} type="video/mp4" />
-        </video>
+        </video>*/}
       </div>
       <div className="container">
         <div className="hero-section__content">

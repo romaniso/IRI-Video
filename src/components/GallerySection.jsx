@@ -27,7 +27,8 @@ import ArtEvent from "../assets/images/gifs/ArtEvent.gif";
 import Gallery from "./Gallery";
 
 const GallerySectionStyles = styled.div`
-  padding: 15rem 0;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
   background: #13070ce5;
   text-align: center;
   overflow: hidden;
@@ -42,6 +43,9 @@ const GallerySectionStyles = styled.div`
       transform: translate(-50%, -50%);
       position: fixed;
       z-index: 200;
+      @media only screen and (max-width: 940px) {
+        width: 95%;
+      }
       /*#close {
         display: none;
         position: absolute;
@@ -63,13 +67,13 @@ const GallerySectionStyles = styled.div`
   }
   .gallery-cover {
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000dd;
+    background-color: rgba(0, 0, 0, 0.904);
     transition: all 0.3s ease 0s;
     &.opened {
-      left: 0;
+      /*left: 0;*/
       position: absolute;
       z-index: 100;
       cursor: pointer;
@@ -221,9 +225,9 @@ export default function GallerySection() {
               <iframe
                 src={playingVideo}
                 title="YouTube video player"
-                frameborder="0"
+                frameborder="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowfullscreen="1"
               ></iframe>
             </div>
           ) : null}
