@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const PlayerStyles = styled.div`
   @media only screen and (min-width: 768px) {
-    /* The biggest grid elements*/
+    /*The biggest grid elements */
     &:nth-child(5),
     &:nth-child(22) {
       grid-column: span 3;
@@ -25,12 +25,6 @@ const PlayerStyles = styled.div`
       grid-row: span 2;
     }
   }
-  &:hover {
-    /*transform: scale(1.03);
-    z-index: 2;*/
-    filter: grayscale(100%) blur(3px);
-  }
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,16 +49,15 @@ const PlayerStyles = styled.div`
 //I need to divide Gallery on home page from Player Elements, because it affects Project page
 const Player = (props) => {
   const [clicked, setClicked] = useState(false);
-  const { src, light = true, gif } = props;
-  console.log(gif);
+  const { src, light = true } = props;
 
   return (
     <PlayerStyles
       className="player-wrapper"
       onClick={() => setClicked(!clicked)}
     >
-      <img src={gif} alt="" />
-      {/*<ReactPlayer
+      {/*<img src={gif} alt="" />*/}
+      <ReactPlayer
         className="react-player"
         url={src}
         width="100%"
@@ -76,7 +69,7 @@ const Player = (props) => {
         //  volume={1}
         muted={true}
         embedOptions={true}
-      />*/}
+      />
     </PlayerStyles>
   );
 };
