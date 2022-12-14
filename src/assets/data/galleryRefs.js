@@ -3,6 +3,15 @@ import { v4 as uuidv4 } from "uuid";
 const galleryRefs = [
   {
     id: uuidv4(),
+    title: "ROMA FOTO con Sergei Ivanov",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/embed/NpN0Q16Ax9E",
+    },
+  },
+  {
+    id: uuidv4(),
     title: "Diverso Saloni - Roma Tiburtina",
     des: "",
     source: {

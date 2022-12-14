@@ -15,7 +15,7 @@ const TitleSectionStyles = styled.div`
     font-family: "Prata Regular";
     font-size: 4rem;
     /*margin-top: 0.5rem;*/
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 10px;
     color: var(--highlight);
     &:not(:last-child) {

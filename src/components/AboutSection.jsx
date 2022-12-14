@@ -2,7 +2,9 @@ import React from "react";
 import TitleSection from "./TitleSection";
 import styled from "styled-components";
 import DescriptionSection from "./DescriptionSection";
-import AboutImg from "../assets/images/aboutImg-4.jpg";
+//import AboutImg from "../assets/images/aboutImg-4.jpg";
+import AboutImg2 from "../assets/images/Iri.jpg";
+//import AboutImg3 from "../assets/images/Iri-2.jpg";
 
 const AboutSectionStyles = styled.div`
   background: #13070ce5;
@@ -64,7 +66,7 @@ export default function AboutSection() {
           </DescriptionSection>
         </div>
         <div className="right">
-          <img src={AboutImg} alt="me" />
+          <img src={AboutImg2} alt="me" />
         </div>
       </div>
     </AboutSectionStyles>

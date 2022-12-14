@@ -3,6 +3,8 @@ import DescriptionSection from "../components/DescriptionSection";
 import ServicesSection from "../components/ServicesSection";
 import Button from "../components/Button";
 import AboutImg from "../assets/images/aboutImg-2.jpg";
+//import AboutImg2 from "../assets/images/Iri.jpg";
+//import AboutImg3 from "../assets/images/Iri-2.jpg";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background.mp4";
 
