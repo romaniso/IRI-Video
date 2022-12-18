@@ -12,10 +12,9 @@ const NavBarStyles = styled.nav`
     width: 100%;
     z-index: 100;
     transition: all 0.3s ease 0s;
-    background-color: #000000e4;
+    background-color: #000;
     &.scrolled {
-      background-color: #120307e0;
-      box-shadow: 0px 5px 15px 0px #00000084;
+      background-color: #01010188;
     }
 
     .body {

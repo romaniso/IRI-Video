@@ -8,16 +8,16 @@ const TitleSectionStyles = styled.div`
     font-family: "Prata Regular";
     font-weight: 400;
     font-size: 2.4rem;
-    color: var(--light);
+    color: var(--highlight);
   }
 
   h2 {
     font-family: "Prata Regular";
     font-size: 4rem;
-    /*margin-top: 0.5rem;*/
-    /*text-transform: uppercase;*/
-    letter-spacing: 10px;
-    color: var(--highlight);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: var(--light);
+    text-shadow: 0px 0px 20px #ffffff3e;
     &:not(:last-child) {
       margin-bottom: 1rem;
     }

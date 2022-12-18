@@ -23,18 +23,20 @@ const ContactBannerStyles = styled.div`
     }
   }
   p {
-    opacity: 0.8;
+    opacity: 0.6;
     font-family: "Parisienne Regular";
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+    color: var(--light);
   }
 
   h3 {
     font-family: "Prata Regular";
-    color: var(--highlight);
     font-size: 4rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    letter-spacing: 2px;
+    /*letter-spacing: 1rem;*/
+    color: var(--light);
+    text-shadow: 0px 0px 20px #ffffff3e;
   }
 
   @media only screen and (max-width: 768px) {

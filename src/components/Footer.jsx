@@ -80,11 +80,11 @@ const FooterStyles = styled.div`
 
   .copyright {
     /* Dark mode */
-    background-color: var(--dark-bg);
+    background-color: #000;
     /* Light mode */
     /*background-color: #aa915b;*/
     padding: 1rem 0;
-    margin-top: 5rem;
+    /*margin-top: 5rem;*/
     p {
       font-size: 1rem;
       /* Light mode */
