@@ -9,15 +9,21 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element />
-      </Routes>
-      <Footer />
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element />
+        </Routes>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </Router>
   );
 }
