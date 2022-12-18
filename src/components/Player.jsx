@@ -62,12 +62,12 @@ const Player = (props) => {
         url={src}
         width="100%"
         height="100%"
-        //  controls={true}
+        controls={true}
         //  playing={true}
         light={light}
         loop={true}
-        //  volume={1}
-        muted={true}
+        volume={1}
+        //  muted={true}
         embedOptions={true}
       />
     </PlayerStyles>

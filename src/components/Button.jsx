@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { BsPlay } from "react-icons/bs";
+import { BsPlayCircle } from "react-icons/bs";
+import "animate.css";
 
 const ButtonStyles = styled.div`
   margin-top: 2rem;
@@ -24,29 +25,34 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .btn--card {
-    white-space: nowrap;
+  .btn--hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
     font-size: 2.2rem;
-    display: inline-block;
     color: var(--light);
     transition: all 0.3s;
-    font-family: "Prata Regular";
-    transition: 0.5s;
-    position: relative;
+    &__img {
+      svg {
+        width: 45px;
+        transition: 0.5s;
+      }
 
-    svg {
-      position: absolute;
-      width: 60px;
-      left: 8rem;
-      transition: 0.5s;
+      &:hover {
+        color: white;
+      }
+
+      &:hover svg {
+        transform: scale(1.3);
+      }
     }
+    &__txt {
+      text-transform: capitalize;
+      text-decoration: underline;
+      text-underline-position: under;
 
-    &:hover {
-      color: white;
-    }
-
-    &:hover svg {
-      transform: scale(1.3);
+      font-family: "Prata Regular";
     }
   }
 `;
@@ -55,14 +61,20 @@ export default function Button({
   btnLink = "/",
   btnText = "test",
   outline = false,
-  cardBtn = false,
+  heroBtn = false,
 }) {
   return (
     <ButtonStyles>
-      {cardBtn ? (
-        <Link className="btn--card" to={btnLink}>
-          <BsPlay />
-          {btnText}
+      {heroBtn ? (
+        <Link
+          className="btn--hero  animate__animated animate__fadeInRight"
+          to={btnLink}
+        >
+          <div className="btn--hero__img">
+            <BsPlayCircle />
+          </div>
+          <span className="btn--hero__txt">See projects</span>
+          {/*{btnText}*/}
         </Link>
       ) : (
         <Link className={outline ? "btn outline" : "btn"} to={btnLink}>

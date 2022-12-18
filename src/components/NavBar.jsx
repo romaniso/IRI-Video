@@ -12,8 +12,9 @@ const NavBarStyles = styled.nav`
     width: 100%;
     z-index: 100;
     transition: all 0.3s ease 0s;
+    background-color: #000000e4;
     &.scrolled {
-      background-color: #00000087;
+      background-color: #120307e0;
       box-shadow: 0px 5px 15px 0px #00000084;
     }
 
@@ -106,7 +107,7 @@ const NavBarStyles = styled.nav`
             display: block;
             color: var(--highlight);
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             letter-spacing: 0.3rem;
 
             &.active {

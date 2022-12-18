@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background.mp4";
-//import VideoBgWebm from "../assets/videos/background.webm";
-//import VideoPoster from "../assets/images/poster.jpg";
-import Card from "./Card";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import Button from "./Button";
+import "animate.css";
 
 const HeroSectionStyles = styled.div`
   .video__wrapper {
@@ -16,7 +15,7 @@ const HeroSectionStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    filter: brightness(30%) grayscale(50%);
+    /*filter: brightness(20%);*/
     video {
       opacity: 0.8;
       width: 100%;
@@ -26,58 +25,93 @@ const HeroSectionStyles = styled.div`
   }
 
   .container {
-    padding-top: 180px;
-    padding-bottom: 100px;
-    height: calc(100vh - 120px); //minus the height of navbar
-    position: relative;
-    @media only screen and (max-width: 940px) {
-      padding-top: 100px;
-    }
-
     .hero-section__content {
+      height: 100vh;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      row-gap: 5rem;
-      @media only screen and (max-width: 940px) {
-        flex-direction: column;
+      position: relative;
+    }
+    .banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      &__title {
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        color: var(--light);
+        text-shadow: 0px 0px 20px #ffffff3e;
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+        @media only screen and (max-width: 768px) {
+          font-size: 4.8rem;
+          &:not(:last-child) {
+            margin-bottom: 1.8rem;
+          }
+        }
+        @media only screen and (max-width: 425px) {
+          font-size: 4rem;
+        }
+      }
+      &__des {
+        font-size: 2.4rem;
+        color: var(--highlight);
+        letter-spacing: 1.5px;
+        text-transform: capitalize;
+        &:not(:last-child) {
+          margin-bottom: 4.2rem;
+        }
+        @media only screen and (max-width: 768px) {
+          font-size: 1.8rem;
+          &:not(:last-child) {
+            margin-bottom: 2.8rem;
+          }
+        }
       }
     }
     .socials {
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       column-gap: 2rem;
-      row-gap: 1.8rem;
-      @media only screen and (max-width: 940px) {
-        flex-direction: row;
-        align-self: flex-end;
-      }
 
-      svg {
-        color: var(--highlight);
-        opacity: calc(0.8);
-        width: 45px;
-        transition: 0.3s ease-in;
-        &:hover {
-          opacity: 1;
-          color: var(--light);
-          transform: scale(1.1);
+      &__item {
+        &:not(:last-child) {
+          border-right: 2px solid var(--highlight);
+          padding-right: 20px;
+        }
+        svg {
+          color: var(--highlight);
+          opacity: calc(0.8);
+          width: 30px;
+          transition: 0.3s ease-in;
+          &:hover {
+            opacity: 1;
+            color: var(--light);
+            transform: scale(1.1);
+          }
         }
       }
     }
     @media only screen and (max-width: 1024px) {
       .socials svg {
-        width: 35px;
+        width: 25px;
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    /*@media only screen and (max-width: 768px) {
       .socials {
         display: flex;
         flex-direction: row;
       }
-    }
+    }*/
   }
 `;
 
@@ -88,30 +122,19 @@ export default function HeroSection() {
         <video autoPlay muted loop playsInline id="background-video">
           <source src={VideoBg} type="video/mp4" />
         </video>
-        {/*<video
-          poster={VideoPoster}
-          autoPlay
-          muted
-          loop
-          preload="auto"
-          playsInline
-          id="background-video"
-        >
-          <source src={VideoBgWebm} type="video/webm" />
-          <source src={VideoBg} type="video/mp4" />
-        </video>*/}
       </div>
       <div className="container">
-        <div className="hero-section__content">
-          <Card
-            heading="IRI Zinchenko"
-            subheading="a proffessional video maker"
-            btnText="Contact"
-            btnLink="/contact"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-            provident quod! Velit ullam temporibus quae fugiat"
-          />
-          <div className="socials">
+        <div className="hero-section__content content">
+          <article className="content__banner banner">
+            <h1 className="banner__title animate__animated animate__fadeInLeft">
+              IRI Zinchenko
+            </h1>
+            <p className="banner__des">proffessional video maker</p>
+            <Button btnLink="/projects" btnText="Check" heroBtn={true}></Button>
+          </article>
+        </div>
+        <div className="content__socials socials">
+          <div className="socials__item">
             <a
               href="https://www.youtube.com/channel/UC7KJVvlAbiof1jEAX35VWZg"
               target="_blank"
@@ -119,6 +142,8 @@ export default function HeroSection() {
             >
               <AiFillYoutube />
             </a>
+          </div>
+          <div className="socials__item">
             <a
               href="https://www.facebook.com/IRI-Production-Roma-101611189020712"
               target="_blank"
@@ -126,6 +151,8 @@ export default function HeroSection() {
             >
               <AiFillFacebook />
             </a>
+          </div>
+          <div className="socials__item">
             <a
               href="https://www.instagram.com/iri_production_/"
               target="_blank"
