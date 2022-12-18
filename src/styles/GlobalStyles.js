@@ -42,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .card {
-    background: rgba(249, 249, 249, 0.042);
+    background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .card:hover {
-    background: rgba(249, 249, 249, 0.1);
+    background: rgb(0, 0, 0);
   }
 /* Smooth Scroll  */
   [data-scrollbar] {

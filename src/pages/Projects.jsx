@@ -7,6 +7,9 @@ import Player from "../components/Player";
 import DescriptionSection from "../components/DescriptionSection";
 
 const ProjectsPageStyles = styled.div`
+  .wrapper {
+    padding-top: 15rem;
+  }
   text-align: center;
   .container {
     max-width: 1500px;
@@ -65,21 +68,23 @@ export default function Projects() {
   };
   return (
     <ProjectsPageStyles>
-      <TitleSection
-        heading="My Works"
-        subheading="Take a look at my projects"
-      />
-      <div className="container project">
-        <div className="project__video">
-          {<Player src={selectedItem.source.src} light={false} />}
+      <div className="wrapper">
+        <TitleSection
+          heading="My Works"
+          subheading="Take a look at my projects"
+        />
+        <div className="container project">
+          <div className="project__video">
+            {<Player src={selectedItem.source.src} light={false} />}
+          </div>
+          <div className="project__description card">
+            <h3>{selectedItem.title}</h3>
+            <DescriptionSection>{selectedItem.des}</DescriptionSection>
+          </div>
         </div>
-        <div className="project__description card">
-          <h3>{selectedItem.title}</h3>
-          <DescriptionSection>{selectedItem.des}</DescriptionSection>
-        </div>
-      </div>
 
-      <VideoCarousel title="My Recent Projects" handleSelect={handleSelect} />
+        <VideoCarousel title="My Recent Projects" handleSelect={handleSelect} />
+      </div>
     </ProjectsPageStyles>
   );
 }

@@ -16,7 +16,6 @@ const AboutPageStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    filter: brightness(10%) grayscale(60%);
     video {
       opacity: 0.8;
       width: 100%;
@@ -28,11 +27,13 @@ const AboutPageStyles = styled.div`
   position: relative;
   padding: 5rem 0 0;
   .top-section {
-    border-left: 2px solid var(--highlight);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /*border-left: 2px solid var(--highlight);*/
     gap: 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     .left {
       flex: 3;
       .subheading {
@@ -108,7 +109,7 @@ export default function About() {
         </video>
       </div>
       <div className="container">
-        <div className="top-section card">
+        <div className="top-section">
           <div className="left">
             <p className="subheading">
               Ciao! I am <span>Irina</span>

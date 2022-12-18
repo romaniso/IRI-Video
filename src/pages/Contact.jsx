@@ -12,6 +12,11 @@ import {
 } from "react-icons/ai";
 
 const ContactPageStyles = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .video__wrapper {
     position: fixed;
     top: 0;
@@ -19,7 +24,6 @@ const ContactPageStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    filter: brightness(10%) grayscale(60%);
     video {
       opacity: 0.8;
       width: 100%;
