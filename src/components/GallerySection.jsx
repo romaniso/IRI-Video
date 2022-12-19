@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import TitleSection from "./TitleSection";
 import { useState } from "react";
 //import ReactPlayer from "react-player";
 //import { AiFillCloseCircle } from "react-icons/ai";
@@ -27,10 +26,10 @@ import ArtEvent from "../assets/images/gifs/ArtEvent.gif";
 import Gallery from "./Gallery";
 
 const GallerySectionStyles = styled.div`
-  padding-top: 15rem;
-  padding-bottom: 15rem;
-  background: #13070ce5;
-  text-align: center;
+  /*padding-top: 15rem;*/
+  /*padding-bottom: 15rem;*/
+  /*background: var(--dark-bg);*/
+  /*text-align: center;*/
   overflow: hidden;
   position: relative;
   .gallery-container {
@@ -82,7 +81,6 @@ const GallerySectionStyles = styled.div`
   .gallery__content {
     margin-top: 5rem;
     padding-top: 5rem;
-    border-top: 2px solid #aa915b75;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-auto-flow: dense;
@@ -187,7 +185,7 @@ export default function GallerySection() {
       src: "https://www.youtube.com/embed/dptZEZgSebA",
       opened: false,
       gif: Concerto,
-      id: 15,
+      id: 14,
     },
   ]);
   const [isPlaying, setPlaying] = useState(false);
@@ -216,7 +214,7 @@ export default function GallerySection() {
           document.body.style.overflow = "auto";
         }}
       ></div>
-      <TitleSection heading="My Works" subheading="what I do" />
+      {/*<TitleSection heading="My Works" />*/}
       <div className="gallery">
         <div className="gallery-container">
           {isPlaying ? (

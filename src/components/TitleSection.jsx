@@ -45,12 +45,12 @@ const TitleSectionStyles = styled.div`
 
 export default function TitleSection({
   heading = "This is a heading",
-  subheading = "This is a subheading",
+  subheading,
 }) {
   return (
     <TitleSectionStyles className="headingSection">
       <h2>{heading}</h2>
-      <p>{subheading}</p>
+      {subheading ? <p>{subheading}</p> : null}
     </TitleSectionStyles>
   );
 }

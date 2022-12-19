@@ -16,6 +16,9 @@ const NavBarStyles = styled.nav`
     &.scrolled {
       background-color: #01010188;
     }
+    &:hover {
+      background-color: #000;
+    }
 
     .body {
       display: flex;

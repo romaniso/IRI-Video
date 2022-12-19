@@ -129,7 +129,7 @@ export default function HeroSection() {
             <h1 className="banner__title animate__animated animate__fadeInLeft">
               IRI Zinchenko
             </h1>
-            <p className="banner__des">proffessional video maker</p>
+            <p className="banner__des">professional video maker</p>
             <Button btnLink="/projects" btnText="Check" heroBtn={true}></Button>
           </article>
         </div>

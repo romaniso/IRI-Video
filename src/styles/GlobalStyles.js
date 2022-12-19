@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
   :root{
     // colors are supposed to be here
-    --dark-bg: #13070c;
+    --dark-bg: rgba(0, 0, 0, 0.8);
     --dark-main: #6b4d57;
     --brown: #896a67;
     --light: #f7ebc1;
@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto Mono';
     background-color: var(--dark-bg);
     scroll-behavior: smooth;
+    
   }
   ul,li{
     list-style: none;
@@ -40,16 +41,14 @@ const GlobalStyles = createGlobalStyle`
     width: 90%;
     margin: 0 auto;
   }
-
-  .card {
+    .card {
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     padding: 3rem 4rem;
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
   }
-
   .card:hover {
     background: rgb(0, 0, 0);
   }

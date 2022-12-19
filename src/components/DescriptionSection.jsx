@@ -11,16 +11,20 @@ const DescriptionSectionStyles = styled.div`
     opacity: 0.8;
     letter-spacing: 1.5px;
     line-height: 4rem;
+    &.white {
+      color: var(--light);
+      opacity: 0.7;
+    }
     @media only screen and (max-width: 768px) {
       font-size: 1.4rem;
     }
   }
 `;
 
-export default function DescriptionSection({ children: text }) {
+export default function DescriptionSection({ children: text, heroDes }) {
   return (
     <DescriptionSectionStyles>
-      <p>{text}</p>
+      {heroDes ? <p className="white">{text}</p> : <p>{text}</p>}
     </DescriptionSectionStyles>
   );
 }

@@ -3,26 +3,34 @@
 import styled from "styled-components";
 
 const GalleryStyles = styled.div`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     /* The biggest grid elements*/
-    &:nth-child(5),
-    &:nth-child(22) {
+    &:nth-child(5) {
       grid-column: span 3;
       grid-row: span 3;
     }
     /* Big grid elements */
-    &:nth-child(19),
     &:nth-child(6),
-    &:nth-child(9),
-    &:nth-child(3),
-    &:nth-child(18),
-    &:nth-child(5),
-    &:nth-child(17),
-    &:nth-child(25),
-    &:nth-child(30),
-    &:nth-child(20) {
+    &:nth-child(3) {
       grid-column: span 2;
       grid-row: span 2;
+    }
+  }
+  @media only screen and (max-width: 1450px) and (min-width: 1160px) {
+    /* Big grid elements */
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(3) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(16) {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1023px) and (min-width: 870px) {
+    &:nth-child(16) {
+      display: none;
     }
   }
   &:hover {

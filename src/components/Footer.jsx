@@ -5,13 +5,10 @@ import styled from "styled-components";
 import FooterCol from "./FooterCol";
 
 const FooterStyles = styled.div`
-  padding-top: 10rem;
-  /* Dark mode */
-  background-color: #13070ce5;
-  /* Light mode */
-  /*background-color: #f7ebc1;*/
+  background-color: var(--dark-bg);
 
   .container {
+    padding: 10rem 0;
     width: 90%;
     margin-inline: auto;
     max-width: 1600px;
@@ -83,17 +80,22 @@ const FooterStyles = styled.div`
     background-color: #000;
     /* Light mode */
     /*background-color: #aa915b;*/
-    padding: 1rem 0;
     /*margin-top: 5rem;*/
-    p {
-      font-size: 1rem;
-      /* Light mode */
-      /*color: #12080e;*/
-      font-weight: 700;
-    }
 
-    .container {
+    &__container {
+      margin: 0 auto;
       font-size: 1.3rem;
+      padding: 2.4rem 0;
+      width: 90%;
+      text-align: center;
+      p {
+        font-size: 1rem;
+        /* Light mode */
+        color: var(--highlight);
+        opacity: 0.6;
+        letter-spacing: 0.3rem;
+        font-weight: 700;
+      }
     }
   }
 `;
@@ -162,8 +164,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="copyright">
-        <div className="container">
-          <DescriptionSection>&copy; 2022 - IRI Zinchenko</DescriptionSection>
+        <div className="copyright__container">
+          <p>&copy; 2022 - IRI Zinchenko</p>
         </div>
       </div>
     </FooterStyles>
