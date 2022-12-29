@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import VideoBg from "../assets/videos/background.mp4";
+import VideoBg from "../assets/videos/background-compressed.mp4";
+import Poster from "../assets/images/poster.jpg";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import Button from "./Button";
 import "animate.css";
@@ -118,7 +119,14 @@ export default function HeroSection() {
   return (
     <HeroSectionStyles>
       <div className="video__wrapper">
-        <video autoPlay muted loop playsInline id="background-video">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          id="background-video"
+          poster={Poster}
+        >
           <source src={VideoBg} type="video/mp4" />
         </video>
       </div>

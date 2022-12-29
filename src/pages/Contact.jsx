@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
-import VideoBg from "../assets/videos/background.mp4";
+import VideoBg from "../assets/videos/background-compressed.mp4";
 import ContactItem from "../components/ContactItem";
 import {
   AiFillPhone,

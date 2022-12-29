@@ -6,7 +6,7 @@ import AboutImg from "../assets/images/aboutImg-2.jpg";
 //import AboutImg2 from "../assets/images/Iri.jpg";
 //import AboutImg3 from "../assets/images/Iri-2.jpg";
 import styled from "styled-components";
-import VideoBg from "../assets/videos/background.mp4";
+import VideoBg from "../assets/videos/background-compressed.mp4";
 
 const AboutPageStyles = styled.div`
   .video__wrapper {

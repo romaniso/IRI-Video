@@ -2,7 +2,7 @@ import React from "react";
 import TitleSection from "./TitleSection";
 import styled from "styled-components";
 import DescriptionSection from "./DescriptionSection";
-import AboutImg2 from "../assets/images/Iri.jpg";
+import AboutImg2 from "../assets/images/Iri-min.jpg";
 import { Link } from "react-router-dom";
 
 const AboutSectionStyles = styled.div`
