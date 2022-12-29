@@ -3,13 +3,6 @@ import React from "react";
 import LogoImg from "../assets/images/logo-2.png";
 import styled from "styled-components";
 
-window.addEventListener("load", () => {
-  const preloaderWrapper = document.querySelector("#preloaderWrapper");
-  preloaderWrapper.style.backdropFilter = "blur(0px) brightness(100%)";
-  const logo = document.querySelector(".logo-wrapper");
-  logo.style.display = "none";
-});
-
 const PreloaderSectionStyles = styled.div`
   #preloaderWrapper {
     backdrop-filter: blur(20px) brightness(20%);
@@ -44,12 +37,19 @@ const PreloaderSectionStyles = styled.div`
     }
   }
 `;
+window.addEventListener("load", () => {
+  const preloaderWrapper = document.querySelector("#preloaderWrapper");
+  preloaderWrapper.style.backdropFilter = "blur(0) brightness(100%)";
+  const logo = document.querySelector(".logo-wrapper");
+  logo.style.display = "none";
+  logo.style.zIndex = "-1";
+  console.log(preloaderWrapper);
+});
 
 export default function Preloader() {
   return (
     <PreloaderSectionStyles>
       <div id="preloaderWrapper">
-        {/*<img src={PreloaderGif} alt="preloader" />*/}
         <div className="logo-wrapper">
           <img src={LogoImg} alt="logo" />
         </div>

@@ -8,7 +8,6 @@ import "animate.css";
 const HeroSectionStyles = styled.div`
   .video__wrapper {
     pointer-events: none;
-    background-image: url(../assets/images/background-img.jpg);
     position: fixed;
     top: 0;
     left: 0;
