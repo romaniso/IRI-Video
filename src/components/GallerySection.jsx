@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
-//import ReactPlayer from "react-player";
-//import { AiFillCloseCircle } from "react-icons/ai";
-//import data from "../assets/data/galleryRefs";
 
 //GIFS for video thumbnails
 import DiversoSaloni from "../assets/images/gifs/Diverso Saloni - Roma Tiburtina.gif";

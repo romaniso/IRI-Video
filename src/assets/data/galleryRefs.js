@@ -3,6 +3,15 @@ import { v4 as uuidv4 } from "uuid";
 const galleryRefs = [
   {
     id: uuidv4(),
+    title: "Napoli",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://youtu.be/QM1oJ7nOIhg",
+    },
+  },
+  {
+    id: uuidv4(),
     title: "ROMA FOTO con Sergei Ivanov",
     des: "",
     source: {
