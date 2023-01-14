@@ -3,11 +3,12 @@ import TitleSection from "../components/TitleSection";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
-//import Player from "../components/Player";
+import Player from "../components/Player";
 import backgroundImage from "../assets/images/background-projects.jpg";
 //import DescriptionSection from "../components/DescriptionSection";
 
 const ProjectsPageStyles = styled.div`
+  padding: 10rem 0px 0px 0px;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -19,7 +20,7 @@ const ProjectsPageStyles = styled.div`
     width: 100%;
     height: 100%;
     z-index: -1;
-    filter: brightness(25%) grayscale(10%);
+    transition: all 0.5s ease 0s;
     img {
       width: 100%;
       height: 100%;
@@ -27,19 +28,24 @@ const ProjectsPageStyles = styled.div`
     }
   }
   .projects__container {
-    padding-top: 15rem;
+    padding-top: 5rem;
     text-align: center;
-    height: 100vh;
+    height: 60vh;
+    position: relative;
 
     .projects__carousel {
     }
   }
   .project {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    margin: 1rem auto;
+    /*display: none;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
     max-width: 1000px;
+    z-index: 100;
+    box-shadow: 0px 0px 20px #ffffff14;
 
     @media only screen and (max-width: 1200px) {
       flex-direction: column;
@@ -82,39 +88,47 @@ const ProjectsPageStyles = styled.div`
 `;
 
 export default function Projects() {
-  const [selectedItem, setSelectedItem] = useState(data[0]);
-
+  const [selectedItem, setSelectedItem] = useState(false);
+  const [shadowBg, setshadowBg] = useState(false);
   const handleSelect = (selectedItem) => {
     setSelectedItem(selectedItem);
+    console.log(selectedItem);
+  };
+  const handleShadow = (shadowBg) => {
+    setshadowBg(shadowBg);
+    console.log(selectedItem);
   };
   return (
-    <ProjectsPageStyles
-      // style={{
-      //   backgroundImage: `url(${backgroundImage})`,
-      //   backgroundRepeat: "no-repeat",
-      // }}
-      className="projects"
-    >
+    <ProjectsPageStyles className="projects">
       <div className="projects__background">
-        <img src={backgroundImage} alt="background" />
+        <img
+          src={backgroundImage}
+          alt="background"
+          style={{
+            filter: shadowBg
+              ? "brightness(5%) grayscale(10%)"
+              : selectedItem
+              ? "brightness(5%) grayscale(10%)"
+              : "brightness(35%) grayscale(10%)",
+          }}
+        />
       </div>
 
       <div className="projects__container">
-        <TitleSection
-          heading="My Works"
-          subheading="Take a look at my projects"
-        />
-        <div className="project">
-          {/*<div className="project__video">
-            {<Player src={selectedItem.source.src} light={false} />}
-          </div>*/}
-          {/*<div className="project__description card">
-            <h3>{selectedItem.title}</h3>
-            <DescriptionSection>{selectedItem.des}</DescriptionSection>
-          </div>*/}
-        </div>
+        <TitleSection heading="Projects" />
+        {selectedItem ? (
+          <div className="project">
+            <div className="project__video">
+              <Player src={selectedItem.source.src} light={false} />
+            </div>
+          </div>
+        ) : null}
 
-        <VideoCarousel title="My Recent Projects" handleSelect={handleSelect} />
+        <VideoCarousel
+          title="My Recent Projects"
+          handleSelect={handleSelect}
+          handleShadow={handleShadow}
+        />
       </div>
     </ProjectsPageStyles>
   );

@@ -15,7 +15,7 @@ const HeroSectionStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    /*filter: brightness(60%);*/
+    filter: brightness(35%);
     video {
       opacity: 0.8;
       width: 100%;
