@@ -3,7 +3,7 @@ import TitleSection from "../components/TitleSection";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
-import Player from "../components/Player";
+//import Player from "../components/Player";
 import backgroundImage from "../assets/images/background-projects.jpg";
 //import DescriptionSection from "../components/DescriptionSection";
 
