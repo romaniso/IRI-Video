@@ -18,6 +18,9 @@ const DescriptionSectionStyles = styled.div`
     @media only screen and (max-width: 768px) {
       font-size: 1.4rem;
     }
+    @media only screen and (max-width: 940px) {
+      line-height: 2.6rem;
+    }
   }
 `;
 

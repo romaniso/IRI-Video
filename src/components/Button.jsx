@@ -20,6 +20,8 @@ const ButtonStyles = styled.div`
     font-family: "Prata Regular";
     letter-spacing: 2.2px;
     border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     transition: 0.5s;
     box-shadow: 0px 0px 20px #ffffff3e;
     position: relative;
@@ -38,16 +40,19 @@ const ButtonStyles = styled.div`
       position: absolute;
       width: 110%;
       height: 400%;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
       background: conic-gradient(
         from 90deg at 50% 50%,
-        #ffffff,
-        #fff1dc,
-        #fdd69c,
+        #ffffffcd,
+        #fff1dcf3,
+        #fdd69cf6,
         #ff9900,
-        #ffdaa3,
-        #fff1dc
+        #ffdaa3f3,
+        #fff1dce4
       );
-      animation: spinBorder 3s linear infinite;
+      animation: spinBorder 2s linear infinite;
     }
     &::after {
       content: "";
@@ -55,7 +60,7 @@ const ButtonStyles = styled.div`
       background: #000000;
       width: 98%;
       height: 95%;
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;

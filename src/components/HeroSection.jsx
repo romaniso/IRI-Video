@@ -15,7 +15,7 @@ const HeroSectionStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    /*filter: brightness(20%);*/
+    /*filter: brightness(60%);*/
     video {
       opacity: 0.8;
       width: 100%;
@@ -105,13 +105,6 @@ const HeroSectionStyles = styled.div`
         width: 25px;
       }
     }
-
-    /*@media only screen and (max-width: 768px) {
-      .socials {
-        display: flex;
-        flex-direction: row;
-      }
-    }*/
   }
 `;
 

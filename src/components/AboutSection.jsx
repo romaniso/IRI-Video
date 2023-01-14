@@ -26,6 +26,8 @@ const AboutSectionStyles = styled.div`
       text-align: left;
       @media only screen and (max-width: 768px) {
         text-align: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
       }
       .link {
         color: var(--highlight);
@@ -51,7 +53,7 @@ const AboutSectionStyles = styled.div`
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 920px) {
       flex-direction: column;
       gap: 5rem;
     }
@@ -73,7 +75,7 @@ export default function AboutSection() {
             and imagination.
             <br />
             <br /> I can also make up a plot for your video clip . If you are
-            looking for a eye-catching video, you are in the right place! Check
+            looking for an eye-catching video, you are in the right place! Check
             out my works<span> </span>
             <Link to="/projects" className="link">
               here

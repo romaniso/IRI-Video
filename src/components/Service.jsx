@@ -5,9 +5,15 @@ import styled from "styled-components";
 import "animate.css";
 const ServiceStyles = styled.div`
   max-width: 350px;
-  padding: 2.5rem;
-  /*border-top: 2px solid var(--highlight);*/
-  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 833px) {
+    padding: 2.5rem;
+    min-height: 260px;
+  }
+  padding: 2.5rem 3.6rem;
   svg {
     width: 4rem;
     color: var(--light);

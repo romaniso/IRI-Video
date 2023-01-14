@@ -4,15 +4,35 @@ import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
 import Player from "../components/Player";
+import backgroundImage from "../assets/images/background-projects.jpg";
 //import DescriptionSection from "../components/DescriptionSection";
 
 const ProjectsPageStyles = styled.div`
-  .container {
-    padding-top: 15rem;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  .projects__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(25%) grayscale(10%);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  text-align: center;
-  .container {
-    max-width: 1500px;
+  .projects__container {
+    padding-top: 15rem;
+    text-align: center;
+    height: 100vh;
+
+    .projects__carousel {
+    }
   }
   .project {
     display: flex;
@@ -68,16 +88,26 @@ export default function Projects() {
     setSelectedItem(selectedItem);
   };
   return (
-    <ProjectsPageStyles>
-      <div className="container">
+    <ProjectsPageStyles
+      // style={{
+      //   backgroundImage: `url(${backgroundImage})`,
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="projects"
+    >
+      <div className="projects__background">
+        <img src={backgroundImage} alt="background" />
+      </div>
+
+      <div className="projects__container">
         <TitleSection
           heading="My Works"
           subheading="Take a look at my projects"
         />
         <div className="project">
-          <div className="project__video">
+          {/*<div className="project__video">
             {<Player src={selectedItem.source.src} light={false} />}
-          </div>
+          </div>*/}
           {/*<div className="project__description card">
             <h3>{selectedItem.title}</h3>
             <DescriptionSection>{selectedItem.des}</DescriptionSection>

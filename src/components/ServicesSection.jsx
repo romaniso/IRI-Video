@@ -14,11 +14,14 @@ const ServicesSectionStyles = styled.div`
   flex-wrap: wrap;*/
   .wrapper {
     margin: 15rem auto;
+    @media only screen and (max-width: 768px) {
+      margin: 10rem auto;
+    }
   }
   .headingSection h2 {
     margin-bottom: 5rem;
     @media only screen and (max-width: 768px) {
-      margin-bottom: 8rem;
+      margin-bottom: 3rem;
     }
   }
 

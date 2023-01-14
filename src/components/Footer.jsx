@@ -6,9 +6,8 @@ import FooterCol from "./FooterCol";
 
 const FooterStyles = styled.div`
   background-color: var(--dark-bg);
-
   .container {
-    padding: 10rem 0;
+    padding: 7rem 0;
     width: 90%;
     margin-inline: auto;
     max-width: 1600px;

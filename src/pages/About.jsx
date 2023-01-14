@@ -45,15 +45,11 @@ const AboutPageStyles = styled.div`
   }
 
   .top-section {
-    /*border-left: 2px solid var(--highlight);*/
-
     column-gap: 4rem;
     row-gap: 6rem;
-    /*height: 100vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex-wrap: wrap;*/
 
     @media only screen and (max-width: 768px) {
       flex-direction: column;
@@ -80,7 +76,7 @@ const AboutPageStyles = styled.div`
     .subheading {
       font-size: 2.2rem;
       margin-bottom: 1rem;
-      color: var(--light);
+      color: var(--highlight);
       text-shadow: 0px 0px 20px #ffffff3e;
       font-weight: 500;
       opacity: 0.8;
@@ -93,7 +89,7 @@ const AboutPageStyles = styled.div`
     .heading {
       font-size: 4.4rem;
       margin-bottom: 2.4rem;
-      color: var(--light);
+      color: var(--highlight);
       text-shadow: 0px 0px 20px #ffffff3e;
       @media only screen and (max-width: 1050px) {
         font-size: 3.6rem;
@@ -101,10 +97,14 @@ const AboutPageStyles = styled.div`
     }
 
     .info {
-      margin-bottom: 2rem;
-
+      margin-bottom: 3.4rem;
       p {
-        max-width: 80%;
+        color: var(--light);
+        opacity: 1;
+        /*max-width: 90%;*/
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
         @media only screen and (max-width: 1050px) {
           font-size: 1.5rem;
           line-height: 2.8rem;
@@ -194,19 +194,21 @@ export default function About() {
               <h2 className="heading">Proffessional Video-Maker</h2>
               <div className="info">
                 <DescriptionSection heroDes={true}>
-                  Hi! I am Irina - a professional and passionate video maker
-                  located in Rome.
-                  <br />
-                  <br />
-                  Video-making and video-editing are my life passions that have
-                  accompanied me through my entire life. I began making films a
-                  dozen years ago in Ukraine - my motherland and carry on doing
-                  it in picturesque Italy. I have filmed several about a few
-                  hundreds various movies.
-                  <br />
-                  <br />
-                  In Ukraine I mainly filmed family events. Currently my main
-                  fields are music clips and landscape movies.
+                  <p>
+                    Hi! I am Irina - a professional and passionate video maker
+                    located in Rome.
+                  </p>
+                  <p>
+                    Video-making and video-editing are my life passions that
+                    have accompanied me through my entire life. I began making
+                    films a dozen years ago in Ukraine - my motherland and carry
+                    on doing it in picturesque Italy. I have filmed several
+                    about a few hundreds various movies.
+                  </p>
+                  <p>
+                    In the past, I mainly filmed family events. Currently my
+                    main fields are music clips and landscape movies.
+                  </p>
                 </DescriptionSection>
               </div>
               <Button btnText="Contact me" btnLink="/contact" />
