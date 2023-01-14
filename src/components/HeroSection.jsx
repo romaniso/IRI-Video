@@ -137,7 +137,7 @@ export default function HeroSection() {
               IRI Zinchenko
             </h1>
             <p className="banner__des">professional video maker</p>
-            <Button btnLink="/projects" btnText="Check" heroBtn={true}></Button>
+            <Button btnLink="/projects" btnText="" heroBtn={true}></Button>
           </article>
         </div>
         <div className="content__socials socials">

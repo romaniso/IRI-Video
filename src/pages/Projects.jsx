@@ -4,7 +4,7 @@ import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
 import Player from "../components/Player";
-import DescriptionSection from "../components/DescriptionSection";
+//import DescriptionSection from "../components/DescriptionSection";
 
 const ProjectsPageStyles = styled.div`
   .container {

@@ -134,23 +134,37 @@ const AboutPageStyles = styled.div`
         animation: animatePhoto 6s linear infinite;
       }
       &__background {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 10%;
         left: 27%;
         height: 80%;
         width: 80%;
-        /*background-color: var(--highlight);*/
+        background-color: var(--highlight);
         border-radius: 50%;
-        background: rgb(255, 239, 205);
-        background: linear-gradient(
-          160deg,
-          rgba(255, 239, 205, 1) 16%,
-          rgba(143, 107, 28, 1) 68%
-        );
-        opacity: 70%;
+        opacity: 80%;
         animation: animateBg 5s linear infinite;
         @media only screen and (max-width: 530px) {
           left: 19%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          background: conic-gradient(
+            from 90deg at 50% 50%,
+            #fff1dc,
+            #fff1dc,
+            #ffcc80,
+            #ff9900,
+            #ffd089,
+            #fff1dc
+          );
+          animation: spinBorder 10s linear infinite;
         }
       }
     }

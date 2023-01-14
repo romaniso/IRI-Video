@@ -37,7 +37,7 @@ const ButtonStyles = styled.div`
       content: "";
       position: absolute;
       width: 110%;
-      height: 390%;
+      height: 400%;
       background: conic-gradient(
         from 90deg at 50% 50%,
         #ffffff,
@@ -69,7 +69,7 @@ const ButtonStyles = styled.div`
         background: linear-gradient(
           160deg,
           rgba(255, 239, 205, 1) 16%,
-          rgba(143, 107, 28, 1) 68%
+          #ba7917 68%
         );
       }
       color: var(--dark-bg);

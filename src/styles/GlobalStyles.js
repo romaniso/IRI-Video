@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --dark-main: #6b4d57;
     --brown: #896a67;
     --light: #f7ebc1;
-    --highlight: #aa915b;
+    --highlight: #e6a555;
   }
   html{
     font-size: 10px;
