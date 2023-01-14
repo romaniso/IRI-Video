@@ -20,13 +20,14 @@ const FooterStyles = styled.div`
     gap: 3rem;
     @media only screen and (max-width: 940px) {
       flex-direction: column;
+      padding: 5rem 0;
     }
 
     @media only screen and (max-width: 768px) {
       gap: 0rem;
 
       div:not(.logo) {
-        margin-top: 5rem;
+        margin-top: 2rem;
       }
 
       .col1 .container {

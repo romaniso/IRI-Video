@@ -15,6 +15,9 @@ const AboutSectionStyles = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    @media only screen and (max-width: 940px) {
+      padding: 10rem 0;
+    }
 
     .left {
       border-left: 2px solid var(--highlight);

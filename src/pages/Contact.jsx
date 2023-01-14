@@ -13,6 +13,7 @@ import {
 
 const ContactPageStyles = styled.div`
   height: 100vh;
+  margin-top: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,17 +33,17 @@ const ContactPageStyles = styled.div`
     }
   }
 
-  padding-top: 7rem;
+  /*padding-top: 7rem;*/
   text-align: center;
 
   .contact__section {
-    padding: 5rem 0;
-    margin-top: 5rem;
+    padding: 2rem 0;
+    margin-top: 2rem;
     margin-bottom: 5rem;
     display: flex;
     /*flex-direction: column;*/
     column-gap: 5rem;
-    row-gap: 5rem;
+    row-gap: 2.4rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

@@ -15,15 +15,24 @@ const ServicesSectionStyles = styled.div`
   .wrapper {
     margin: 15rem auto;
   }
+  .headingSection h2 {
+    margin-bottom: 5rem;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 8rem;
+    }
+  }
 
   .services {
-    padding-top: 5rem;
-    padding: 7rem 3rem;
+    /*padding-top: 5rem;*/
+    /*padding: 7rem 3rem;*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 7rem;
+    gap: 5rem;
+    /*@media only screen and (max-width: 940) {
+      padding: 0rem 0 0 0;
+    }*/
   }
 
   @media only screen and (max-width: 768px) {

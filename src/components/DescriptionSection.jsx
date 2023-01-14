@@ -10,7 +10,7 @@ const DescriptionSectionStyles = styled.div`
     color: var(--highlight);
     opacity: 0.8;
     letter-spacing: 1.5px;
-    line-height: 4rem;
+    line-height: 3.6rem;
     &.white {
       color: var(--light);
       opacity: 0.7;
