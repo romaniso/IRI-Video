@@ -8,8 +8,8 @@ import VideoBg from "../assets/videos/background-compressed.mp4";
 const AboutPageStyles = styled.div`
   @keyframes animatePhoto {
     50% {
-      right: 10px;
-      top: -30px;
+      right: 5px;
+      top: -20px;
     }
   }
   @keyframes animateBg {
@@ -23,16 +23,10 @@ const AboutPageStyles = styled.div`
     position: relative;
 
     .about__container {
-      padding: 6rem 0 0 0;
+      padding: 10rem 0 0 0;
       @media only screen and (max-width: 1460px) {
-        padding: 14rem 0 0 0;
-      }
-      /*@media only screen and (max-width: 940px) {
         padding: 12rem 0 0 0;
       }
-      @media only screen and (max-width: 768px) {
-        padding: 12rem 0 0 0;
-      }*/
     }
   }
   .video__wrapper {
@@ -97,7 +91,7 @@ const AboutPageStyles = styled.div`
     }
 
     .heading {
-      font-size: 4.6rem;
+      font-size: 4.4rem;
       margin-bottom: 2.4rem;
       color: var(--light);
       text-shadow: 0px 0px 20px #ffffff3e;
@@ -137,7 +131,7 @@ const AboutPageStyles = styled.div`
         right: 0;
         height: 100%;
         z-index: 20;
-        animation: animatePhoto 4s linear infinite;
+        animation: animatePhoto 6s linear infinite;
       }
       &__background {
         position: absolute;
@@ -153,7 +147,8 @@ const AboutPageStyles = styled.div`
           rgba(255, 239, 205, 1) 16%,
           rgba(143, 107, 28, 1) 68%
         );
-        animation: animateBg 2s linear infinite;
+        opacity: 70%;
+        animation: animateBg 5s linear infinite;
         @media only screen and (max-width: 530px) {
           left: 19%;
         }
@@ -185,16 +180,19 @@ export default function About() {
               <h2 className="heading">Proffessional Video-Maker</h2>
               <div className="info">
                 <DescriptionSection heroDes={true}>
-                  I am a proffessional video maker who loves filming and editing
-                  videos. Stick around here and I'll show you what I can. A
-                  passionate video maker from Rome, Italy.
+                  Hi! I am Irina - a professional and passionate video maker
+                  located in Rome.
                   <br />
-                  <br /> Film making is my hobby that allows me to use my
-                  creativity and imagination.
                   <br />
-                  <br /> I can also make up a plot for your video clip . If you
-                  are looking for a eye-catching video, you are in the right
-                  place!
+                  Video-making and video-editing are my life passions that have
+                  accompanied me through my entire life. I began making films a
+                  dozen years ago in Ukraine - my motherland and carry on doing
+                  it in picturesque Italy. I have filmed several about a few
+                  hundreds various movies.
+                  <br />
+                  <br />
+                  In Ukraine I mainly filmed family events. Currently my main
+                  fields are music clips and landscape movies.
                 </DescriptionSection>
               </div>
               <Button btnText="Contact me" btnLink="/contact" />

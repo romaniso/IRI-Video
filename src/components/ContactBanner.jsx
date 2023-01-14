@@ -16,7 +16,7 @@ const ContactBannerStyles = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-left: 2px solid var(--highlight);
+    /*border-left: 2px solid var(--highlight);*/
 
     .logo {
       width: 130px;
@@ -27,6 +27,7 @@ const ContactBannerStyles = styled.div`
     font-family: "Parisienne Regular";
     font-size: 2.8rem;
     color: var(--light);
+    margin-bottom: 1rem;
   }
 
   h3 {

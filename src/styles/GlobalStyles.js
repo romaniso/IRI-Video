@@ -46,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
     padding: 3rem 4rem;
     transition: 0.5s ease-out;
   }

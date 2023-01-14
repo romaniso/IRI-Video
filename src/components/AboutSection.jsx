@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const AboutSectionStyles = styled.div`
   background: rgba(0, 0, 0, 0.9);
-  .container {
+  .about-section__container {
     max-width: 1200px;
     margin: 4rem auto;
-    padding: 17rem 0;
+    /*padding: 17rem 0;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,10 +20,13 @@ const AboutSectionStyles = styled.div`
     }
 
     .left {
-      border-left: 2px solid var(--highlight);
+      /*border-left: 2px solid var(--highlight);*/
       padding-left: 2rem;
       flex: 3;
       text-align: left;
+      @media only screen and (max-width: 768px) {
+        text-align: center;
+      }
       .link {
         color: var(--highlight);
         text-decoration: underline;
@@ -42,7 +45,7 @@ const AboutSectionStyles = styled.div`
       justify-content: flex-end;
       align-items: center;
       img {
-        max-width: 500px;
+        max-width: 420px;
         min-width: 250px;
         filter: brightness(90%) grayscale(30%);
       }
@@ -58,18 +61,20 @@ const AboutSectionStyles = styled.div`
 export default function AboutSection() {
   return (
     <AboutSectionStyles>
-      <div className="container">
+      <div className="about-section__container">
         <div className="left">
           <TitleSection heading="About me" subheading="" />
           <DescriptionSection heroDes={true}>
-            Hi! I am Irina - a professional and passionate video maker located
-            in Rome. Video-making and video-editing are my life passions that
-            have accompanied me through my entire life. I began making films a
-            dozen years ago in Ukraine - my motherland and carry on doing it in
-            picturesque Italy. I have filmed several hundreds or even more
-            movies for various occasions. In Ukraine I mainly filmed weddings
-            and family events. Currently my main fields are music clips and
-            landscapes and cityscapes movies. Check out my works<span> </span>
+            I am a proffessional video maker who loves filming and editing
+            videos. Stick around here and I'll show you what I can. A passionate
+            video maker from Rome, Italy.
+            <br />
+            <br /> Film making is my hobby that allows me to use my creativity
+            and imagination.
+            <br />
+            <br /> I can also make up a plot for your video clip . If you are
+            looking for a eye-catching video, you are in the right place! Check
+            out my works<span> </span>
             <Link to="/projects" className="link">
               here
             </Link>

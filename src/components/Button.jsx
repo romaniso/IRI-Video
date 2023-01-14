@@ -5,23 +5,75 @@ import { BsPlayCircle } from "react-icons/bs";
 import "animate.css";
 
 const ButtonStyles = styled.div`
+  @keyframes spinBorder {
+    to {
+      transform: rotate(360deg);
+    }
+  }
   margin-top: 2rem;
   .btn {
     white-space: nowrap;
     font-size: 2.2rem;
     padding: 0.7em 2em;
     display: inline-block;
-    /* border-radius: 12px; */
     color: var(--light);
-    transition: all 0.3s;
     font-family: "Prata Regular";
-    border: 2px solid var(--gray-1);
-    /* text-transform: uppercase; */
-    background-color: var(--highlight);
+    letter-spacing: 2.2px;
+    border-radius: 8px;
     transition: 0.5s;
+    box-shadow: 0px 0px 20px #ffffff3e;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__content {
+      z-index: 20;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 390%;
+      background: conic-gradient(
+        from 90deg at 50% 50%,
+        #ffffff,
+        #fff1dc,
+        #fdd69c,
+        #ff9900,
+        #ffdaa3,
+        #fff1dc
+      );
+      animation: spinBorder 3s linear infinite;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: #000000;
+      width: 98%;
+      height: 95%;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     &:hover {
-      background: var(--dark-bg);
+      &::before {
+        background: rgba(255, 239, 205, 1) 16%;
+      }
+      &::after {
+        background: linear-gradient(
+          160deg,
+          rgba(255, 239, 205, 1) 16%,
+          rgba(143, 107, 28, 1) 68%
+        );
+      }
+      color: var(--dark-bg);
+      font-weight: bold;
     }
   }
 
@@ -74,11 +126,11 @@ export default function Button({
             <BsPlayCircle />
           </div>
           <span className="btn--hero__txt">See projects</span>
-          {/*{btnText}*/}
+          {btnText}
         </Link>
       ) : (
         <Link className={outline ? "btn outline" : "btn"} to={btnLink}>
-          {btnText}
+          <span className="btn__content">{btnText}</span>
         </Link>
       )}
     </ButtonStyles>
