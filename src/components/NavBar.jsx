@@ -15,6 +15,11 @@ const NavBarStyles = styled.nav`
     background-color: #000;
     &.scrolled {
       background-color: #01010188;
+      /*background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(0, 0, 0, 0.091) 70%
+      );*/
     }
     &:hover {
       background-color: #000;

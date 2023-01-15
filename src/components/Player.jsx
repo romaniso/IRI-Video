@@ -49,7 +49,7 @@ const PlayerStyles = styled.div`
 //I need to divide Gallery on home page from Player Elements, because it affects Project page
 const Player = (props) => {
   const [clicked, setClicked] = useState(false);
-  const { src, light = true } = props;
+  const { src, light = true, autoPlay } = props;
 
   return (
     <PlayerStyles
@@ -62,13 +62,13 @@ const Player = (props) => {
         url={src}
         width="100%"
         height="100%"
-        controls={true}
-        //  playing={true}
+        //  controls={true}
+        playing={autoPlay}
         light={light}
         loop={true}
         volume={1}
         //  muted={true}
-        embedOptions={true}
+        //  embedOptions={true}
       />
     </PlayerStyles>
   );

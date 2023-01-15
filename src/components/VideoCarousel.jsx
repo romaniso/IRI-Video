@@ -11,63 +11,64 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 const VideoCarouselStyles = styled.div`
   #swiper {
     overflow: visible;
-    ul.swiper-wrapper {
-      .swiper-slide.slider__item {
-        box-sizing: border-box;
-        transition: 700ms all;
-        transform-origin: center center;
-        backface-visibility: hidden;
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        &:hover {
-          transform: scale(1.3);
-          .item-slider__title {
-            opacity: 1;
-          }
-        }
-        &:hover ~ & {
-          transform: translate3d(80px, 0, 0);
+    /*background: rgb(0, 0, 0);*/
+    background: linear-gradient(0deg, #000000df 23%, rgba(0, 0, 0, 0.146) 84%);
+    padding: 20px 0;
+    .swiper-slide.slider__item {
+      box-sizing: border-box;
+      transition: 700ms all;
+      transform-origin: center center;
+      backface-visibility: hidden;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      &:hover {
+        transform: scale(1.3);
+        .item-slider__title {
+          opacity: 1;
         }
       }
-      .shiftLeft {
-        transform: translate3d(-40px, 0, 0);
-        filter: brightness(10%);
-      }
-
-      .shiftRight {
-        transform: translate3d(40px, 0, 0);
-        filter: brightness(10%);
+      &:hover ~ & {
+        transform: translate3d(80px, 0, 0);
       }
     }
-    .item-slider__title {
+    .shiftLeft {
+      transform: translate3d(-40px, 0, 0);
+      filter: brightness(10%);
+    }
+
+    .shiftRight {
+      transform: translate3d(40px, 0, 0);
+      filter: brightness(10%);
+    }
+  }
+  .item-slider__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    opacity: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 25%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    transition: opacity 0.3s ease 0s;
+    p {
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-      font-size: 10px;
-      opacity: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9) 25%,
-        rgba(0, 0, 0, 0) 100%
-      );
-      opacity: 0;
-      pointer-events: none;
-      z-index: 20;
-      transition: opacity 0.3s ease 0s;
-      p {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 10px;
-        z-index: 22;
-        font-size: 1.4rem;
-        letter-spacing: 0.15rem;
-        color: white;
-        text-align: center;
-      }
+      width: 100%;
+      padding: 10px;
+      z-index: 22;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      color: white;
+      text-align: center;
     }
   }
   .player-wrapper {
@@ -76,20 +77,9 @@ const VideoCarouselStyles = styled.div`
   .swiper {
     position: absolute;
     width: 100%;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    /*#swiper .swiper-button-prev::after,
-    #swiper .swiper-button-next::after {
-      padding: 5px;
-    }
-    @media only screen and (max-width: 768px) {
-      #swiper .swiper-button-prev::after,
-      #swiper .swiper-button-next::after {
-        font-size: 3rem;
-      }
-    }*/
+    transform: translate(-50%, 0);
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -100,12 +90,6 @@ const VideoCarouselStyles = styled.div`
       top: 50%;
       transform: translateY(-50%);
       z-index: 100;
-      /*.swiper-button-prev::after {
-        left: 0 !important;
-      }
-      .swiper-button-next::after {
-        right: 0 !important;
-      }*/
     }
     .swiper-pagination {
       margin-top: 4rem;
@@ -163,7 +147,16 @@ export default function VideoCarousel({
   }
 
   return (
-    <VideoCarouselStyles>
+    <VideoCarouselStyles
+      onMouseEnter={() => {
+        handleHovered(true);
+        handleShadow(true);
+      }}
+      onMouseLeave={() => {
+        handleHovered(false);
+        handleShadow(false);
+      }}
+    >
       <Swiper
         id="swiper"
         tag="section"
@@ -180,13 +173,13 @@ export default function VideoCarousel({
         onReachEnd={() => console.log("Swiper end reached")}
         breakpoints={{
           1450: {
-            slidesPerView: 5,
+            slidesPerView: 7,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 5,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           450: {
             slidesPerView: 2,
@@ -207,14 +200,11 @@ export default function VideoCarousel({
                 handleSelect(item);
               }}
               onMouseEnter={(e) => {
-                handleShadow(true);
                 handleHoverEnter(e.target);
                 handleHovered(true);
               }}
               onMouseLeave={(e) => {
-                handleShadow(false);
                 handleHoverLeave(e.target);
-                handleHovered(false);
               }}
             >
               <div className="item-slider__title">

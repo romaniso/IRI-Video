@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TitleSection from "../components/TitleSection";
 import styled from "styled-components";
-//import data from "../assets/data/galleryRefs";
+import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
 import Player from "../components/Player";
 import backgroundImage from "../assets/images/background-projects.jpg";
@@ -28,9 +28,9 @@ const ProjectsPageStyles = styled.div`
     }
   }
   .projects__container {
-    padding-top: 5rem;
+    /*padding-top: 5rem;*/
     text-align: center;
-    height: 60vh;
+    height: 80vh;
     position: relative;
 
     .projects__carousel {
@@ -38,14 +38,18 @@ const ProjectsPageStyles = styled.div`
   }
   .project {
     /*display: none;*/
-    position: absolute;
-    top: 50%;
+    /*position: absolute;*/
+    top: calc(0% - 100px);
+    position: relative;
     left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
-    max-width: 1000px;
-    z-index: 100;
-    box-shadow: 0px 0px 20px #ffffff14;
+    height: 100%;
+    transform: translate(-50%, 0);
+
+    /*max-width: 1000px;*/
+    /*z-index: 0;*/
+    /*box-shadow: 0px 0px 20px #ffffff14;*/
+    transition: filter 0.5s ease-out 0s;
 
     @media only screen and (max-width: 1200px) {
       flex-direction: column;
@@ -54,6 +58,8 @@ const ProjectsPageStyles = styled.div`
     @media only screen and (max-width: 768px) {
       .project__video {
         /* display: none; */
+        /*pointer-events: none;*/
+        position: relative;
       }
     }
 
@@ -121,7 +127,22 @@ export default function Projects() {
               <Player src={selectedItem.source.src} light={false} />
             </div>
           </div>
-        ) : null}
+        ) : (
+          <div
+            className="project"
+            style={{
+              filter: shadowBg
+                ? "brightness(25%) grayscale(10%)"
+                : selectedItem
+                ? "brightness(25%) grayscale(10%)"
+                : "none",
+            }}
+          >
+            <div className="project__video">
+              <Player src={data[0].source.src} light={false} autoPlay={true} />
+            </div>
+          </div>
+        )}
 
         <VideoCarousel
           title="My Recent Projects"
