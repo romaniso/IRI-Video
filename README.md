@@ -73,3 +73,13 @@ For styles I used **Styled Components** library, so it helped me minimalize the 
 
 You can check it out live - **<https://iri-zinchenko.com/>**
 or look into the code here on GitHub - **<https://github.com/romaniso/iri_production>**
+
+### What I need to do next
+
+- [ ] Restyle the media player, especially the main screen
+- [ ] Make everything responsive
+- [ ] Restyle the contact page
+- [ ] Add a mailer to the contact page
+- [ ] Consider changing gallery on the home page
+- [ ] Animate cards, headings, etc.
+- [ ] Create a preloader for each page
