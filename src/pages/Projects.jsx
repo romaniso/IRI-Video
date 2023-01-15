@@ -96,7 +96,6 @@ export default function Projects() {
   };
   const handleShadow = (shadowBg) => {
     setshadowBg(shadowBg);
-    console.log(selectedItem);
   };
   return (
     <ProjectsPageStyles className="projects">

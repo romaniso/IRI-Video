@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css/bundle";
@@ -11,18 +11,15 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 const VideoCarouselStyles = styled.div`
   #swiper {
     overflow: visible;
-    /*cursor: grab;*/
     ul.swiper-wrapper {
-      /*transition: 1s transform;*/
-      /*&:hover {
-        transform: translate3d(-40px, 0, 0);
-      }*/
       .swiper-slide.slider__item {
         box-sizing: border-box;
         transition: 700ms all;
         transform-origin: center center;
         backface-visibility: hidden;
         position: relative;
+        border-radius: 8px;
+        overflow: hidden;
         &:hover {
           transform: scale(1.3);
           .item-slider__title {
@@ -82,58 +79,65 @@ const VideoCarouselStyles = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*.swiper-button-prev {
-      left: 2rem;
-    }
 
-    .swiper-button-next {
-      right: 2rem;
-    }*/
-    /*
+    /*#swiper .swiper-button-prev::after,
+    #swiper .swiper-button-next::after {
+      padding: 5px;
+    }
     @media only screen and (max-width: 768px) {
-      .swiper-button-prev::after,
-      .swiper-button-next::after {
+      #swiper .swiper-button-prev::after,
+      #swiper .swiper-button-next::after {
         font-size: 3rem;
       }
-    }
+    }*/
 
     .swiper-button-prev,
     .swiper-button-next {
       color: var(--highlight);
-      top: 50%;
       transition: color 0.5s ease-in-out;
-
-      &:hover {
-        color: var(--light);
+      width: 3%;
+      height: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      /*.swiper-button-prev::after {
+        left: 0 !important;
       }
-    }*/
+      .swiper-button-next::after {
+        right: 0 !important;
+      }*/
+    }
     .swiper-pagination {
-      display: flex;
-      justify-content: center;
       margin-top: 4rem;
       position: relative;
+      height: 2px;
       .swiper-pagination-progressbar-fill {
-        background: var(--highlight);
+        background: linear-gradient(
+          160deg,
+          rgba(255, 239, 205, 1) 16%,
+          #ba7917 68%
+        );
+        /*background: var(--highlight);*/
       }
     }
   }
 `;
 
-//const backgroundImage = document.querySelector(".projects__background");
 export default function VideoCarousel({
   title = "Title of the row",
   handleSelect,
   handleShadow,
 }) {
-  //  const [hovered, setHover] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const slides = document.getElementsByClassName("swiper-slide");
   let number = 0;
-  //  console.log(backgroundImage);
+  const handleHovered = (hovered) => {
+    setHovered(hovered);
+  };
   function handleHoverEnter(hoveredSlide) {
     const currentIndex = hoveredSlide.dataset.order;
     slides[currentIndex].style.zIndex = "100";
     slides[currentIndex].style.boxShadow = "0px 0px 20px #ffffff14";
-    // backgroundImage.style.filter = "brightness(10%) grayscale(10%)";
     for (let i = 0; i < currentIndex; i++) {
       let slide = slides[i];
       slide.classList.add("shiftLeft");
@@ -148,7 +152,6 @@ export default function VideoCarousel({
     const currentIndex = hoveredSlide.dataset.order;
     slides[currentIndex].style.zIndex = "0";
     slides[currentIndex].style.boxShadow = "none";
-    // backgroundImage.style.filter = "brightness(35%) grayscale(10%)";
     for (let i = 0; i < slides.length; i++) {
       let slide = slides[i];
       slide.classList.remove("shiftLeft");
@@ -163,11 +166,9 @@ export default function VideoCarousel({
     <VideoCarouselStyles>
       <Swiper
         id="swiper"
-        //  className="row"
         tag="section"
         wrapperTag="ul"
-        //  navigation
-        //  autoplay={{ delay: 2000 }}
+        navigation={hovered ? true : false}
         pagination={{ type: "progressbar" }}
         spaceBetween={8}
         //  slidesPerView={5}
@@ -208,10 +209,12 @@ export default function VideoCarousel({
               onMouseEnter={(e) => {
                 handleShadow(true);
                 handleHoverEnter(e.target);
+                handleHovered(true);
               }}
               onMouseLeave={(e) => {
                 handleShadow(false);
                 handleHoverLeave(e.target);
+                handleHovered(false);
               }}
             >
               <div className="item-slider__title">
