@@ -96,12 +96,7 @@ const VideoCarouselStyles = styled.div`
       position: relative;
       height: 2px;
       .swiper-pagination-progressbar-fill {
-        background: linear-gradient(
-          160deg,
-          rgba(255, 239, 205, 1) 16%,
-          #ba7917 68%
-        );
-        /*background: var(--highlight);*/
+        background: var(--highlight-gradient);
       }
     }
   }

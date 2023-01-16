@@ -71,11 +71,7 @@ const ButtonStyles = styled.div`
         background: rgba(255, 239, 205, 1) 16%;
       }
       &::after {
-        background: linear-gradient(
-          160deg,
-          rgba(255, 239, 205, 1) 16%,
-          #ba7917 68%
-        );
+        background: var(--highlight-gradient);
       }
       color: var(--dark-bg);
       font-weight: bold;

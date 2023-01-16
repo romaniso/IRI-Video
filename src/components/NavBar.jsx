@@ -160,15 +160,16 @@ const NavBarStyles = styled.nav`
           position: absolute;
           top: 1rem;
           right: 1rem;
-          height: 400px;
+          height: 450px;
           width: 300px;
           padding: 1.5rem 1rem;
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
           z-index: 999;
-          background: var(--dark-bg);
-          border: 2px solid var(--highlight);
+          background: black;
+          border: 1px solid var(--highlight);
+          border-radius: 10px;
           /* border-radius: 15px; */
           transition: 0.3s ease-in;
 

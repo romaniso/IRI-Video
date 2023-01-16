@@ -80,6 +80,12 @@ const GallerySectionStyles = styled.div`
     padding-top: 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    @media only screen and (max-width: 434px) {
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    }
+    @media only screen and (min-width: 435px) and (max-width: 580px) {
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
     grid-auto-flow: dense;
     /*flex-wrap: wrap;*/
     /*align-items: center;*/

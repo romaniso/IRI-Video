@@ -13,6 +13,11 @@ const GlobalStyles = createGlobalStyle`
     --brown: #896a67;
     --light: #f7ebc1;
     --highlight: #e6a555;
+    --highlight-gradient: linear-gradient(
+          160deg,
+          rgba(255, 239, 205, 1) 16%,
+          #ba7917 68%
+        );
   }
   html{
     font-size: 10px;
