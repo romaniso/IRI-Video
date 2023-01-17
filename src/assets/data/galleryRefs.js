@@ -3,6 +3,15 @@ import { v4 as uuidv4 } from "uuid";
 const galleryRefs = [
   {
     id: uuidv4(),
+    title: "Puglia 2022",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://youtu.be/eZbyDriCeUE",
+    },
+  },
+  {
+    id: uuidv4(),
     title: "Napoli",
     des: "",
     source: {

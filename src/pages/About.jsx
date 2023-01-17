@@ -201,9 +201,9 @@ export default function About() {
                   <p>
                     Video-making and video-editing are my life passions that
                     have accompanied me through my entire life. I began making
-                    films a dozen years ago in Ukraine - my motherland and carry
-                    on doing it in picturesque Italy. I have filmed several
-                    about a few hundreds various movies.
+                    films a dozen years ago in Ukraine - my motherland - and
+                    carry on doing it in picturesque Italy. I have filmed
+                    several about a few hundreds various movies.
                   </p>
                   <p>
                     In the past, I mainly filmed family events. Currently my

@@ -202,9 +202,9 @@ export default function VideoCarousel({
                 handleHoverLeave(e.target);
               }}
             >
-              <div className="item-slider__title">
+              {/*<div className="item-slider__title">
                 <p>{item.title}</p>
-              </div>
+              </div>*/}
               <Player src={item.source.src} />
             </SwiperSlide>
           ))}
