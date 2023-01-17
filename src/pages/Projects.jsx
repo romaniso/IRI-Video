@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TitleSection from "../components/TitleSection";
+//import TitleSection from "../components/TitleSection";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
@@ -30,8 +30,8 @@ const ProjectsPageStyles = styled.div`
   .projects__container {
     /*padding-top: 5rem;*/
     text-align: center;
-    height: 80vh;
-    position: relative;
+    /*height: 80vh;*/
+    /*position: relative;*/
 
     .projects__carousel {
     }
@@ -39,12 +39,13 @@ const ProjectsPageStyles = styled.div`
   .project {
     /*display: none;*/
     /*position: absolute;*/
-    top: calc(0% - 100px);
+    /*top: calc(0% - 100px);*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
     position: relative;
-    left: 50%;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    transform: translate(-50%, 0);
+    margin: 0 auto;
 
     /*max-width: 1000px;*/
     /*z-index: 0;*/
@@ -120,7 +121,7 @@ export default function Projects() {
       </div>
 
       <div className="projects__container">
-        <TitleSection heading="Projects" />
+        {/*<TitleSection heading="Projects" />*/}
         {selectedItem ? (
           <div className="project">
             <div className="project__video">

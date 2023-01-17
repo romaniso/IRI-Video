@@ -14,6 +14,10 @@ const VideoCarouselStyles = styled.div`
     /*background: rgb(0, 0, 0);*/
     background: linear-gradient(0deg, #000000df 23%, rgba(0, 0, 0, 0.146) 84%);
     padding: 20px 0;
+    @media only screen and (max-width: 768px) {
+      /*height: 200px;*/
+      /*width: 100%;*/
+    }
     .swiper-slide.slider__item {
       box-sizing: border-box;
       transition: 700ms all;
@@ -22,6 +26,8 @@ const VideoCarouselStyles = styled.div`
       position: relative;
       border-radius: 8px;
       overflow: hidden;
+      /*@media only screen and (min-width: 768px) {
+      }*/
       &:hover {
         transform: scale(1.3);
         .item-slider__title {
@@ -75,11 +81,11 @@ const VideoCarouselStyles = styled.div`
     pointer-events: none;
   }
   .swiper {
-    position: absolute;
+    /*position: absolute;
     width: 100%;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0);*/
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -171,14 +177,14 @@ export default function VideoCarousel({
             slidesPerView: 7,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 7,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 6,
           },
-          450: {
-            slidesPerView: 2,
-          },
+          // 450: {
+          //   slidesPerView: 5,
+          // },
         }}
       >
         <section>
@@ -202,9 +208,9 @@ export default function VideoCarousel({
                 handleHoverLeave(e.target);
               }}
             >
-              {/*<div className="item-slider__title">
+              <div className="item-slider__title">
                 <p>{item.title}</p>
-              </div>*/}
+              </div>
               <Player src={item.source.src} />
             </SwiperSlide>
           ))}
