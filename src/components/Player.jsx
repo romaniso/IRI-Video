@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
 
@@ -48,13 +49,13 @@ const PlayerStyles = styled.div`
 
 //I need to divide Gallery on home page from Player Elements, because it affects Project page
 const Player = (props) => {
-  const [clicked, setClicked] = useState(false);
+  //  const [clicked, setClicked] = useState(false);
   const { src, light = true, autoPlay } = props;
 
   return (
     <PlayerStyles
       className="player-wrapper"
-      onClick={() => setClicked(!clicked)}
+      //onClick={() => setClicked(!clicked)}
     >
       {/*<img src={gif} alt="" />*/}
       <ReactPlayer

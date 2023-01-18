@@ -7,12 +7,40 @@ import Player from "../components/Player";
 import backgroundImage from "../assets/images/background-projects.jpg";
 //import DescriptionSection from "../components/DescriptionSection";
 
+//Temporary solution
+import { Swiper, SwiperSlide } from "swiper/react";
+//import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import "swiper/css/bundle";
+import { useMediaQuery } from "react-responsive";
+
 const ProjectsPageStyles = styled.div`
   padding: 10rem 0px 0px 0px;
+  @media only screen and (max-width: 990px) {
+    padding: 14rem 0px 0px 0px;
+  }
   position: relative;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  /* Temprorary */
+  .swiper {
+    /*position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);*/
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: var(--highlight);
+      transition: color 0.5s ease-in-out;
+      width: 3%;
+      height: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+    }
+  }
   .projects__background {
     position: fixed;
     top: 0;
@@ -104,6 +132,9 @@ export default function Projects() {
   const handleShadow = (shadowBg) => {
     setshadowBg(shadowBg);
   };
+  //Temporary solution
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <ProjectsPageStyles className="projects">
       <div className="projects__background">
@@ -120,37 +151,65 @@ export default function Projects() {
         />
       </div>
 
-      <div className="projects__container">
-        {/*<TitleSection heading="Projects" />*/}
-        {selectedItem ? (
-          <div className="project">
-            <div className="project__video">
-              <Player src={selectedItem.source.src} light={false} />
+      {isMobile ? (
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {data.map((item) => (
+            <SwiperSlide
+              key={item.id}
+              className="slider__item item-slider"
+              tag="li"
+              style={{
+                aspectRatio: 16 / 9,
+              }}
+            >
+              <Player src={item.source.src} light={true} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <div className="projects__container">
+          {selectedItem ? (
+            <div className="project">
+              <div className="project__video">
+                <Player src={selectedItem.source.src} light={false} />
+              </div>
             </div>
-          </div>
-        ) : (
-          <div
-            className="project"
-            style={{
-              filter: shadowBg
-                ? "brightness(25%) grayscale(10%)"
-                : selectedItem
-                ? "brightness(25%) grayscale(10%)"
-                : "none",
-            }}
-          >
-            <div className="project__video">
-              <Player src={data[0].source.src} light={false} autoPlay={true} />
+          ) : (
+            <div
+              className="project"
+              style={{
+                filter: shadowBg
+                  ? "brightness(25%) grayscale(10%)"
+                  : selectedItem
+                  ? "brightness(25%) grayscale(10%)"
+                  : "none",
+              }}
+            >
+              <div className="project__video">
+                <Player
+                  src={data[0].source.src}
+                  light={false}
+                  autoPlay={true}
+                />
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <VideoCarousel
-          title="My Recent Projects"
-          handleSelect={handleSelect}
-          handleShadow={handleShadow}
-        />
-      </div>
+          {!isMobile ? (
+            <VideoCarousel
+              title="My Recent Projects"
+              handleSelect={handleSelect}
+              handleShadow={handleShadow}
+            />
+          ) : null}
+        </div>
+      )}
     </ProjectsPageStyles>
   );
 }
