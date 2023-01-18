@@ -13,7 +13,7 @@ const VideoCarouselStyles = styled.div`
     overflow: visible;
     /*background: rgb(0, 0, 0);*/
     background: linear-gradient(0deg, #000000df 23%, rgba(0, 0, 0, 0.146) 84%);
-    padding: 20px 0;
+    padding: 25px 0;
     @media only screen and (max-width: 768px) {
       /*height: 200px;*/
       /*width: 100%;*/
@@ -26,6 +26,7 @@ const VideoCarouselStyles = styled.div`
       position: relative;
       border-radius: 8px;
       overflow: hidden;
+      cursor: pointer;
       /*@media only screen and (min-width: 768px) {
       }*/
       &:hover {
@@ -81,12 +82,6 @@ const VideoCarouselStyles = styled.div`
     pointer-events: none;
   }
   .swiper {
-    /*position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);*/
-
     .swiper-button-prev,
     .swiper-button-next {
       color: var(--highlight);

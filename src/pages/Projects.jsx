@@ -14,7 +14,7 @@ import "swiper/css/bundle";
 import { useMediaQuery } from "react-responsive";
 
 const ProjectsPageStyles = styled.div`
-  padding: 10rem 0px 0px 0px;
+  padding: 12rem 0px 0px 0px;
   @media only screen and (max-width: 990px) {
     padding: 14rem 0px 0px 0px;
   }
@@ -24,21 +24,20 @@ const ProjectsPageStyles = styled.div`
   overflow: hidden;
   /* Temprorary */
   .swiper {
-    /*position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);*/
-
     .swiper-button-prev,
     .swiper-button-next {
-      color: var(--highlight);
-      transition: color 0.5s ease-in-out;
       width: 3%;
       height: 100%;
-      top: 50%;
       transform: translateY(-50%);
+      color: var(--highlight);
       z-index: 100;
+      @media only screen and (max-width: 768px) {
+        /*display: inline-block;*/
+        transition: color 0.5s ease-in-out;
+        width: 6%;
+        height: 18%;
+        top: 55%;
+      }
     }
   }
   .projects__background {
@@ -55,29 +54,12 @@ const ProjectsPageStyles = styled.div`
       object-fit: cover;
     }
   }
-  .projects__container {
-    /*padding-top: 5rem;*/
-    text-align: center;
-    /*height: 80vh;*/
-    /*position: relative;*/
-
-    .projects__carousel {
-    }
-  }
   .project {
-    /*display: none;*/
-    /*position: absolute;*/
-    /*top: calc(0% - 100px);*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, 0);*/
     position: relative;
     width: 50%;
     height: 100%;
     margin: 0 auto;
-
-    /*max-width: 1000px;*/
-    /*z-index: 0;*/
-    /*box-shadow: 0px 0px 20px #ffffff14;*/
+    box-shadow: 0px 0px 40px #000000ba;
     transition: filter 0.5s ease-out 0s;
 
     @media only screen and (max-width: 1200px) {
@@ -86,8 +68,6 @@ const ProjectsPageStyles = styled.div`
 
     @media only screen and (max-width: 768px) {
       .project__video {
-        /* display: none; */
-        /*pointer-events: none;*/
         position: relative;
       }
     }
@@ -123,11 +103,11 @@ const ProjectsPageStyles = styled.div`
 `;
 
 export default function Projects() {
+  const [playing, setPlaying] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);
   const [shadowBg, setshadowBg] = useState(false);
   const handleSelect = (selectedItem) => {
     setSelectedItem(selectedItem);
-    console.log(selectedItem);
   };
   const handleShadow = (shadowBg) => {
     setshadowBg(shadowBg);
@@ -156,8 +136,13 @@ export default function Projects() {
           spaceBetween={50}
           slidesPerView={1}
           navigation={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => {
+            console.log("stop");
+            setPlaying(false);
+          }}
+          autoplay={false}
+          watchSlidesProgress={true}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           {data.map((item) => (
             <SwiperSlide
@@ -168,7 +153,13 @@ export default function Projects() {
                 aspectRatio: 16 / 9,
               }}
             >
-              <Player src={item.source.src} light={true} />
+              <Player
+                src={item.source.src}
+                light={true}
+                playing={playing}
+                setPlaying={setPlaying}
+                data={item.id}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -192,11 +183,7 @@ export default function Projects() {
               }}
             >
               <div className="project__video">
-                <Player
-                  src={data[0].source.src}
-                  light={false}
-                  autoPlay={true}
-                />
+                <Player src={data[0].source.src} light={false} playing={true} />
               </div>
             </div>
           )}
