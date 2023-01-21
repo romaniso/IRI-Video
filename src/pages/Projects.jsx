@@ -16,7 +16,7 @@ import { useMediaQuery } from "react-responsive";
 const ProjectsPageStyles = styled.div`
   padding: 12rem 0px 0px 0px;
   @media only screen and (max-width: 990px) {
-    padding: 14rem 0px 0px 0px;
+    padding: 11rem 0px 0px 0px;
   }
   position: relative;
   background-position: center;
@@ -95,6 +95,8 @@ const ProjectsPageStyles = styled.div`
   .project__video {
     flex: 4;
     aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
     .player-wrapper {
       pointer-events: all;
       transform: none;

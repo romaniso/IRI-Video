@@ -14,8 +14,8 @@ const AboutPageStyles = styled.div`
   }
   @keyframes animateBg {
     50% {
-      right: 20px;
-      top: 20px;
+      right: 10px;
+      top: 10px;
     }
   }
   .about__wrapper {
@@ -139,16 +139,16 @@ const AboutPageStyles = styled.div`
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 10%;
-        left: 27%;
-        height: 80%;
-        width: 80%;
+        top: -2%;
+        left: 5%;
+        height: 95%;
+        width: 95%;
         background-color: var(--highlight);
         border-radius: 50%;
         opacity: 80%;
         animation: animateBg 5s linear infinite;
         @media only screen and (max-width: 530px) {
-          left: 19%;
+          /*left: 19%;*/
         }
         &::before {
           content: "";
