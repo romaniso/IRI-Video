@@ -43,10 +43,7 @@ const TitleSectionStyles = styled.div`
   }
 `;
 
-export default function TitleSection({
-  heading = "This is a heading",
-  subheading,
-}) {
+export default function TitleSection({ heading, subheading }) {
   return (
     <TitleSectionStyles className="headingSection">
       <h2>{heading}</h2>

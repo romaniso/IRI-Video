@@ -1,19 +1,24 @@
 import React, { useState } from "react";
-//import TitleSection from "../components/TitleSection";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
 import Player from "../components/Player";
 import backgroundImage from "../assets/images/background-projects.jpg";
-//import DescriptionSection from "../components/DescriptionSection";
+import { BiChevronDown } from "react-icons/bi";
 
 //Temporary solution
 import { Swiper, SwiperSlide } from "swiper/react";
 //import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css/bundle";
 import { useMediaQuery } from "react-responsive";
+import GallerySection from "../components/GallerySection";
 
 const ProjectsPageStyles = styled.div`
+  @keyframes shakeY {
+    50% {
+      top: 5px;
+    }
+  }
   padding: 12rem 0px 0px 0px;
   @media only screen and (max-width: 990px) {
     padding: 11rem 0px 0px 0px;
@@ -22,6 +27,28 @@ const ProjectsPageStyles = styled.div`
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  .gallery-section--projects {
+    padding: 25px 15px 0;
+    .see-more {
+      color: var(--light);
+      opacity: 0.8;
+      letter-spacing: 1.5px;
+      /*line-height: 3.6rem;*/
+      font-size: 2.2rem;
+      text-align: end;
+      position: relative;
+      margin-right: 3rem;
+      .arrow {
+        top: 0;
+        transform: translateY(-10%);
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        animation: shakeY infinite 2s linear;
+      }
+    }
+  }
+
   /* Temprorary */
   .swiper {
     .swiper-button-prev,
@@ -134,37 +161,45 @@ export default function Projects() {
       </div>
 
       {isMobile ? (
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation={true}
-          onSlideChange={() => {
-            console.log("stop");
-            setPlaying(false);
-          }}
-          autoplay={false}
-          watchSlidesProgress={true}
-          // onSwiper={(swiper) => console.log(swiper)}
-        >
-          {data.map((item) => (
-            <SwiperSlide
-              key={item.id}
-              className="slider__item item-slider"
-              tag="li"
-              style={{
-                aspectRatio: 16 / 9,
-              }}
-            >
-              <Player
-                src={item.source.src}
-                light={true}
-                playing={playing}
-                setPlaying={setPlaying}
-                data={item.id}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation={true}
+            onSlideChange={() => {
+              console.log("stop");
+              setPlaying(false);
+            }}
+            autoplay={false}
+            watchSlidesProgress={true}
+            // onSwiper={(swiper) => console.log(swiper)}
+          >
+            {data.map((item) => (
+              <SwiperSlide
+                key={item.id}
+                className="slider__item item-slider"
+                tag="li"
+                style={{
+                  aspectRatio: 16 / 9,
+                }}
+              >
+                <Player
+                  src={item.source.src}
+                  light={true}
+                  playing={playing}
+                  setPlaying={setPlaying}
+                  data={item.id}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <section className="gallery-section--projects">
+            <p className="see-more">
+              See more <BiChevronDown className="arrow"></BiChevronDown>
+            </p>
+            <GallerySection isProjectsPage={true} />
+          </section>
+        </>
       ) : (
         <div className="projects__container">
           {selectedItem ? (
@@ -189,7 +224,6 @@ export default function Projects() {
               </div>
             </div>
           )}
-
           {!isMobile ? (
             <VideoCarousel
               title="My Recent Projects"

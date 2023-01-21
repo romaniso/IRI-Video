@@ -75,9 +75,22 @@ const GallerySectionStyles = styled.div`
       cursor: pointer;
     }
   }
+  .gallery__content.content--projectsPage {
+    margin-top: 0;
+    padding: 15px 0;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    @media only screen and (max-width: 434px) {
+      grid-template-columns: repeat(auto-fit, minmax(72.5px, 1fr));
+    }
+    @media only screen and (min-width: 435px) and (max-width: 580px) {
+      grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+    }
+  }
   .gallery__content {
     margin-top: 5rem;
     padding-top: 5rem;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     @media only screen and (max-width: 434px) {
@@ -92,7 +105,7 @@ const GallerySectionStyles = styled.div`
   }
 `;
 
-export default function GallerySection() {
+export default function GallerySection({ isProjectsPage }) {
   const [galleryItems, setItems] = useState([
     {
       src: "https://www.youtube.com/embed/ImZwWtOJL-Q",
@@ -232,9 +245,20 @@ export default function GallerySection() {
               ></iframe>
             </div>
           ) : null}
-          <div className="gallery__content">
+          <div
+            className={
+              isProjectsPage
+                ? "gallery__content content--projectsPage"
+                : "gallery__content"
+            }
+          >
             {galleryItems.map((item) => (
-              <Gallery item={item} key={item.id} onClick={onThumbnailClick} />
+              <Gallery
+                item={item}
+                key={item.id}
+                onClick={onThumbnailClick}
+                isProjectsPage={isProjectsPage}
+              />
             ))}
           </div>
         </div>

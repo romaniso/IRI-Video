@@ -1,7 +1,4 @@
-//import React, { useState } from "react";
-//import ReactPlayer from "react-player";
 import styled from "styled-components";
-
 const GalleryStyles = styled.div`
   @media only screen and (min-width: 1024px) {
     /* The biggest grid elements*/
@@ -33,21 +30,25 @@ const GalleryStyles = styled.div`
       display: none;
     }
   }
-  &:hover {
-    /*transform: scale(1.03);
+  .gallery-wrapper {
+    &:hover {
+      /*transform: scale(1.03);
     z-index: 2;*/
-    filter: grayscale(100%) blur(3px);
-  }
+      filter: grayscale(100%) blur(3px);
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  aspect-ratio: 16 / 9;
-  /*padding-bottom: 52%;*/
-  overflow: hidden;
-  transition: 0.5s ease-out;
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+  }
+  .gallery-wrapper.gallery--projectsPage {
+    border-radius: 10px;
+  }
 `;
 function getClassName(selected) {
   if (selected) {
@@ -57,17 +58,25 @@ function getClassName(selected) {
   }
 }
 
-const Player = ({ item, onClick }) => {
+const Gallery = ({ item, onClick, isProjectsPage }) => {
   return (
-    <GalleryStyles className="gallery-wrapper">
-      <img
-        src={item.gif}
-        alt="My video project"
-        className={getClassName(item.opened)}
-        onClick={() => onClick(item.id)}
-      />
+    <GalleryStyles>
+      <article
+        className={
+          isProjectsPage
+            ? "gallery-wrapper gallery--projectsPage"
+            : "gallery-wrapper"
+        }
+      >
+        <img
+          src={item.gif}
+          alt="My video project"
+          className={getClassName(item.opened)}
+          onClick={() => onClick(item.id)}
+        />
+      </article>
     </GalleryStyles>
   );
 };
 
-export default Player;
+export default Gallery;
