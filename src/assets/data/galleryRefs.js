@@ -3,6 +3,15 @@ import { v4 as uuidv4 } from "uuid";
 const galleryRefs = [
   {
     id: uuidv4(),
+    title: "cover Celin Dion voce Franca Campoli",
+    des: "",
+    source: {
+      type: "video/youtube",
+      src: "https://youtu.be/px137zRVN1g",
+    },
+  },
+  {
+    id: uuidv4(),
     title: "Puglia 2022",
     des: "",
     source: {

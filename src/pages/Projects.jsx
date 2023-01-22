@@ -34,7 +34,7 @@ const ProjectsPageStyles = styled.div`
       opacity: 0.8;
       letter-spacing: 1.5px;
       /*line-height: 3.6rem;*/
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       text-align: end;
       position: relative;
       margin-right: 3rem;
