@@ -167,12 +167,10 @@ export default function Projects() {
             slidesPerView={1}
             navigation={true}
             onSlideChange={() => {
-              console.log("stop");
               setPlaying(false);
             }}
             autoplay={false}
             watchSlidesProgress={true}
-            // onSwiper={(swiper) => console.log(swiper)}
           >
             {data.map((item) => (
               <SwiperSlide
@@ -197,7 +195,7 @@ export default function Projects() {
             <p className="see-more">
               See more <BiChevronDown className="arrow"></BiChevronDown>
             </p>
-            <GallerySection isProjectsPage={true} />
+            <GallerySection isProjectsPage={true} mobile={true} />
           </section>
         </>
       ) : (
@@ -224,13 +222,11 @@ export default function Projects() {
               </div>
             </div>
           )}
-          {!isMobile ? (
-            <VideoCarousel
-              title="My Recent Projects"
-              handleSelect={handleSelect}
-              handleShadow={handleShadow}
-            />
-          ) : null}
+          <VideoCarousel
+            title="My Recent Projects"
+            handleSelect={handleSelect}
+            handleShadow={handleShadow}
+          />
         </div>
       )}
     </ProjectsPageStyles>

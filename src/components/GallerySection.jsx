@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
+import data from "../assets/data/galleryRefs";
+import Thumbnail from "./Thumbnail";
 
 //GIFS for video thumbnails
 import DiversoSaloni from "../assets/images/gifs/Diverso Saloni - Roma Tiburtina.gif";
@@ -21,6 +23,7 @@ import Concerto from "../assets/images/gifs/concerto.gif";
 import ArtEvent from "../assets/images/gifs/ArtEvent.gif";
 
 import Gallery from "./Gallery";
+//import Player from "./Player";
 
 const GallerySectionStyles = styled.div`
   /*padding-top: 15rem;*/
@@ -105,7 +108,7 @@ const GallerySectionStyles = styled.div`
   }
 `;
 
-export default function GallerySection({ isProjectsPage }) {
+export default function GallerySection({ isProjectsPage, mobile }) {
   const [galleryItems, setItems] = useState([
     {
       src: "https://www.youtube.com/embed/ImZwWtOJL-Q",
@@ -208,17 +211,27 @@ export default function GallerySection({ isProjectsPage }) {
   const [playingVideo, setVideo] = useState(null);
 
   function onThumbnailClick(id) {
-    const newGalleryItems = [...galleryItems];
+    let newGalleryItems;
+    if (isProjectsPage) {
+      newGalleryItems = [...data];
+    } else {
+      newGalleryItems = [...galleryItems];
+    }
     newGalleryItems.forEach((item) => (item.opened = false));
     const openedGalleryItem = newGalleryItems.find((item) => item.id === id);
     openedGalleryItem.opened = !openedGalleryItem.opened;
+    console.log(openedGalleryItem);
     setItems(newGalleryItems);
     setPlaying(true);
     openPlayer(openedGalleryItem);
     document.body.style.overflow = "hidden";
   }
   function openPlayer(video) {
-    setVideo(video.src);
+    if (isProjectsPage) {
+      setVideo(video.source.src);
+    } else {
+      setVideo(video.src);
+    }
   }
 
   return (
@@ -239,9 +252,9 @@ export default function GallerySection({ isProjectsPage }) {
               <iframe
                 src={playingVideo}
                 title="YouTube video player"
-                frameborder="1"
+                // frameborder="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen="1"
+                allowFullScreen="1"
               ></iframe>
             </div>
           ) : null}
@@ -252,14 +265,23 @@ export default function GallerySection({ isProjectsPage }) {
                 : "gallery__content"
             }
           >
-            {galleryItems.map((item) => (
-              <Gallery
-                item={item}
-                key={item.id}
-                onClick={onThumbnailClick}
-                isProjectsPage={isProjectsPage}
-              />
-            ))}
+            {mobile
+              ? data.map((item) => (
+                  <Thumbnail
+                    item={item}
+                    key={item.id}
+                    onClick={onThumbnailClick}
+                    isProjectsPage={isProjectsPage}
+                  />
+                ))
+              : galleryItems.map((item) => (
+                  <Gallery
+                    item={item}
+                    key={item.id}
+                    onClick={onThumbnailClick}
+                    isProjectsPage={isProjectsPage}
+                  />
+                ))}
           </div>
         </div>
       </div>
