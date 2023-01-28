@@ -4,7 +4,7 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css/bundle";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
-import Player from "./Player";
+//import Player from "./Player";
 import Thumbnail from "./Thumbnail";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
