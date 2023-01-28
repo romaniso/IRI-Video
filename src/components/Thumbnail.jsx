@@ -4,7 +4,7 @@ const ThumbnailWrapper = styled.article`
   &:hover {
     /*transform: scale(1.03);
     z-index: 2;*/
-    filter: grayscale(100%) blur(3px);
+    filter: grayscale(40%) blur(1px);
   }
   display: flex;
   justify-content: center;

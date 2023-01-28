@@ -5,6 +5,7 @@ import "swiper/css/bundle";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import Player from "./Player";
+import Thumbnail from "./Thumbnail";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -20,7 +21,7 @@ const VideoCarouselStyles = styled.div`
     }
     .swiper-slide.slider__item {
       box-sizing: border-box;
-      transition: 700ms all;
+      transition: 400ms transform ease-out;
       transform-origin: center center;
       backface-visibility: hidden;
       position: relative;
@@ -31,6 +32,7 @@ const VideoCarouselStyles = styled.div`
       }*/
       &:hover {
         transform: scale(1.3);
+        z-index: 20;
         .item-slider__title {
           opacity: 1;
         }
@@ -78,9 +80,9 @@ const VideoCarouselStyles = styled.div`
       text-align: center;
     }
   }
-  .player-wrapper {
+  /*.player-wrapper {
     pointer-events: none;
-  }
+  }*/
   .swiper {
     .swiper-button-prev,
     .swiper-button-next {
@@ -206,7 +208,13 @@ export default function VideoCarousel({
               <div className="item-slider__title">
                 <p>{item.title}</p>
               </div>
-              <Player src={item.source.src} />
+              <Thumbnail
+                item={item}
+                key={item.id}
+                // onClick={onThumbnailClick}
+                // isProjectsPage={isProjectsPage}
+              />
+              {/*<Player src={item.source.src} />*/}
             </SwiperSlide>
           ))}
         </section>

@@ -42,6 +42,8 @@ const GallerySectionStyles = styled.div`
       transform: translate(-50%, -50%);
       position: fixed;
       z-index: 200;
+      border-radius: 10px;
+      overflow: hidden;
       @media only screen and (max-width: 940px) {
         width: 95%;
       }
@@ -73,7 +75,7 @@ const GallerySectionStyles = styled.div`
     transition: all 0.3s ease 0s;
     &.opened {
       /*left: 0;*/
-      position: absolute;
+      position: fixed;
       z-index: 100;
       cursor: pointer;
     }
@@ -252,7 +254,7 @@ export default function GallerySection({ isProjectsPage, mobile }) {
               <iframe
                 src={playingVideo}
                 title="YouTube video player"
-                // frameborder="1"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen="1"
               ></iframe>
