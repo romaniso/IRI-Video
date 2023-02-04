@@ -75,8 +75,23 @@ import piccola_webp from "../images/thumbnails/piccola.webp";
 import piccola_jpg from "../images/thumbnails/piccola.jpg";
 import kitesurfLago_webp from "../images/thumbnails/kitesurfLago.webp";
 import kitesurfLago_jpg from "../images/thumbnails/kitesurfLago.jpg";
+import coverLucianoPetroselli_webp from "../images/thumbnails/coverLucianoPetruselli.webp";
+import coverLucianoPetroselli_jpg from "../images/thumbnails/coverLucianoPetruselli.jpg";
 
 const galleryRefs = [
+  {
+    id: uuidv4(),
+    title: "Luciano Petroselli “La musica che gira intorno“ Cover",
+    des: "",
+    thumbnail: {
+      webp: coverLucianoPetroselli_webp,
+      jpg: coverLucianoPetroselli_jpg,
+    },
+    source: {
+      type: "video/youtube",
+      src: "https://youtu.be/fkbv9ChENzs",
+    },
+  },
   {
     id: uuidv4(),
     title: "cover Celin Dion voce Franca Campoli",

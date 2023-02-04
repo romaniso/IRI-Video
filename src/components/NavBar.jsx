@@ -92,7 +92,7 @@ const NavBarStyles = styled.nav`
 
       ul {
         margin: 0;
-        padding: 0;
+        padding: 0 0;
         display: flex;
         justify-content: center;
         li {

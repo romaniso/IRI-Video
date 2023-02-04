@@ -11,7 +11,7 @@ const ContactItemStyles = styled.div`
   gap: 3.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-  border-right: 2px solid var(--highlight);
+  /*border-right: 2px solid var(--highlight);*/
   .info {
     align-self: center;
     text-align: center;
