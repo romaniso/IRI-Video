@@ -4,23 +4,20 @@ import { MdPlace } from "react-icons/md";
 import styled from "styled-components";
 
 const ContactItemStyles = styled.div`
-  width: 500px;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  gap: 3.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  /*border-right: 2px solid var(--highlight);*/
+  gap: 1rem;
+  /*flex-wrap: wrap;*/
   .info {
     align-self: center;
     text-align: center;
     p,
     a {
       font-size: 1.6rem;
-      color: var(--highlight);
+      color: var(--light);
       /*opacity: 0.8;*/
-      letter-spacing: 1.5px;
+      letter-spacing: 1.1px;
       &:hover {
         text-decoration: underline;
       }
@@ -29,18 +26,14 @@ const ContactItemStyles = styled.div`
       }
     }
   }
-
-  @media only screen and (max-width: 768px) {
-    margin: 0 2.5rem;
-    max-width: 450px;
-  }
   .icon {
-    color: var(--light);
-    background-color: var(--highlight);
-    padding: 1.3rem;
+    color: black;
+    background: var(--light);
+    padding: 0.35rem 0.5rem;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 10%;
+    opacity: 0.8;
 
     svg {
       width: 3rem;
@@ -48,44 +41,8 @@ const ContactItemStyles = styled.div`
   }
 `;
 
-export default function ContactItem({
-  icon = <MdPlace></MdPlace>,
-  text = "this is an info",
-}) {
+export default function ContactItem({ icon = <MdPlace></MdPlace>, text }) {
   switch (text) {
-    case "Facebook":
-      text = (
-        <a
-          href="https://www.facebook.com/profile.php?id=100076280823208"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {text}
-        </a>
-      );
-      break;
-    case "YouTube":
-      text = (
-        <a
-          href="https://www.youtube.com/channel/UC7KJVvlAbiof1jEAX35VWZg"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {text}
-        </a>
-      );
-      break;
-    case "Instagram":
-      text = (
-        <a
-          href="https://www.instagram.com/iri_production_/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {text}
-        </a>
-      );
-      break;
     case "iri.zinchenko.roma@gmail.com":
       text = (
         <a
@@ -108,7 +65,7 @@ export default function ContactItem({
       text = <p>{text}</p>;
   }
   return (
-    <ContactItemStyles className="wrapper card">
+    <ContactItemStyles className="wrapper">
       <div className="icon">{icon}</div>
       <div className="info">{text}</div>
     </ContactItemStyles>

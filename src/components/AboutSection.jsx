@@ -72,7 +72,7 @@ const AboutSectionStyles = styled.div`
           margin-left: 2.2rem;
         }
         @media only screen and (max-width: 530px) {
-          max-width: 350px;
+          max-width: 280px;
         }
         &__image {
           position: relative;
@@ -97,7 +97,7 @@ const AboutSectionStyles = styled.div`
           background-color: var(--highlight);
           border-radius: 50%;
           opacity: 80%;
-          animation: animateBg 7s linear infinite;
+          /*animation: animateBg 7s linear infinite;*/
           @media only screen and (max-width: 530px) {
             /*left: 19%;*/
           }

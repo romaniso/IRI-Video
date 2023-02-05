@@ -19,6 +19,8 @@ const ButtonStyles = styled.div`
     color: var(--light);
     font-family: "Prata Regular";
     letter-spacing: 2.2px;
+    outline: none;
+    border: none;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -31,7 +33,16 @@ const ButtonStyles = styled.div`
     overflow: hidden;
     cursor: pointer;
 
-    &__content {
+    &--form {
+      /*min-width: 400px;*/
+      height: 50px;
+      .btn__content {
+        font-size: 16px;
+      }
+    }
+
+    &__content,
+    input {
       z-index: 20;
     }
 
@@ -115,6 +126,7 @@ export default function Button({
   btnText = "test",
   outline = false,
   heroBtn = false,
+  formMessage = false,
 }) {
   return (
     <ButtonStyles>
@@ -129,6 +141,11 @@ export default function Button({
           <span className="btn--hero__txt">See projects</span>
           {btnText}
         </Link>
+      ) : formMessage ? (
+        //  <input className="btn btn--form" type="submit" value={btnText} />
+        <button className="btn btn--form" type="submit">
+          <span className="btn__content">{btnText}</span>
+        </button>
       ) : (
         <Link className={outline ? "btn outline" : "btn"} to={btnLink}>
           <span className="btn__content">{btnText}</span>
