@@ -36,7 +36,7 @@ const NavBarStyles = styled.nav`
         height: 80px;
       }
       @media (max-width: 767.98px) {
-        height: 80px;
+        height: 65px;
       }
       .logo {
         max-width: 100px;
@@ -125,37 +125,20 @@ const NavBarStyles = styled.nav`
       }
 
       @media only screen and (max-width: 1024px) {
-        margin: 1.5rem 3rem;
-
-        .logo {
-          width: 100px;
-        }
-
-        ul {
-          li a {
-            font-size: 1.6rem;
-          }
-        }
+        margin: 0.3rem 3rem;
       }
 
       @media only screen and (max-width: 768px) {
         .menu {
           z-index: 999;
           display: block;
-
           &.hidden {
             display: none;
           }
         }
-
-        .logo {
-          /*width: 80px;*/
-        }
-
         .close {
           display: block;
         }
-
         ul {
           position: absolute;
           top: 1rem;

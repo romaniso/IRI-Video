@@ -11,6 +11,9 @@ const ButtonStyles = styled.div`
     }
   }
   margin-top: 2rem;
+  @media only screen and (max-width: 920px) {
+    width: 100%;
+  }
   .btn {
     white-space: nowrap;
     font-size: 2.2rem;
@@ -36,6 +39,9 @@ const ButtonStyles = styled.div`
     &--form {
       /*min-width: 400px;*/
       height: 50px;
+      @media only screen and (max-width: 920px) {
+        width: 100%;
+      }
       .btn__content {
         font-size: 16px;
       }

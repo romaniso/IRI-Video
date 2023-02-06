@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background-compressed.mp4";
@@ -14,14 +14,12 @@ import {
 import Button from "../components/Button";
 
 const ContactPageStyles = styled.div`
-  /*height: 100vh;*/
   display: flex;
-  /*flex-direction: column;*/
   padding: 12rem 0px;
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 920px) {
-    padding: 10rem 0px 3rem;
+    padding: 11rem 0px 3rem;
   }
   .video__wrapper {
     position: fixed;
@@ -43,17 +41,18 @@ const ContactPageStyles = styled.div`
   text-align: center;
 
   .contact__section {
-    /*padding: 2rem;*/
     margin-top: 2rem;
     margin-bottom: 5rem;
     display: flex;
-    /*flex-direction: column;*/
     column-gap: 2rem;
     row-gap: 2.4rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
     position: relative;
+    @media only screen and (max-width: 920px) {
+      row-gap: 1.8rem;
+    }
   }
   .section-contact {
     .headingSection {
@@ -74,17 +73,22 @@ const ContactPageStyles = styled.div`
       .contact-right__socials {
         display: flex;
         justify-content: flex-start;
-        column-gap: 0px;
+        column-gap: 15px;
         padding: 1rem;
+        @media only screen and (max-width: 920px) {
+          width: 100%;
+          justify-content: space-between;
+        }
         .social {
           display: flex;
           align-items: center;
           color: black;
-          background: var(--light);
-          padding: 0.35rem 0.5rem;
+          background: var(--highlight);
+          box-shadow: var(--box-shadow);
+          padding: 0.5rem;
           align-items: center;
           justify-content: center;
-          border-radius: 10%;
+          border-radius: 50%;
           opacity: 0.8;
           &:not(:last-child) {
             margin-right: 20px;
@@ -92,14 +96,15 @@ const ContactPageStyles = styled.div`
 
           svg {
             width: 3rem;
+            @media only screen and (max-width: 920px) {
+              width: 2.6rem;
+            }
           }
         }
       }
     }
     &__left {
       display: inline-flex;
-      /*align-items: flex-start;*/
-      /*justify-content: space-between;*/
       flex-direction: column;
       width: 360px;
       @media only screen and (max-width: 920px) {
@@ -111,7 +116,6 @@ const ContactPageStyles = styled.div`
         justify-content: space-between;
         flex-direction: column;
         width: 100%;
-
         &__input {
           width: 100%;
           height: 50px;
@@ -125,7 +129,9 @@ const ContactPageStyles = styled.div`
           background-color: var(--dark-bg);
           margin-bottom: 10px;
           @media only screen and (max-width: 920px) {
-            width: 100%;
+            height: 40px;
+            padding: 8px 12px;
+            font-size: 12px;
           }
           &:focus {
             border: 1px solid var(--light);
@@ -137,6 +143,9 @@ const ContactPageStyles = styled.div`
             letter-spacing: 2.2px;
             opacity: 0.4;
             padding-left: 6px;
+            @media only screen and (max-width: 920px) {
+              font-size: 12px;
+            }
           }
           &--message {
             min-height: 200px;
@@ -157,9 +166,42 @@ const ContactPageStyles = styled.div`
       }
     }
   }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    padding: 10px 15px;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    font-size: 14px;
+    color: var(--success-color);
+    letter-spacing: 1.1px;
+    line-height: 1.8;
+    opacity: 0.9;
+    transition: opacity 0.3s ease 0s;
+    &.hidden {
+      opacity: 0;
+      z-index: -100;
+      pointer-events: none;
+    }
+  }
 `;
 
 export default function Contact() {
+  const [popUp, setPopUp] = useState(false);
+  const handlePopup = (popUp) => {
+    setPopUp(true);
+    setTimeout(() => {
+      setPopUp(false);
+    }, 2000);
+  };
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -176,6 +218,7 @@ export default function Contact() {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          handlePopup();
         },
         (error) => {
           console.log(error.text);
@@ -255,6 +298,11 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <article className={popUp ? "popup" : "popup hidden"}>
+        <p className="popup__content">
+          You message has been sent <br></br>successfully
+        </p>
+      </article>
     </ContactPageStyles>
   );
 }

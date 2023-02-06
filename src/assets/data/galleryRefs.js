@@ -89,7 +89,7 @@ const galleryRefs = [
     },
     source: {
       type: "video/youtube",
-      src: "https://youtu.be/fkbv9ChENzs",
+      src: "https://www.youtube.com/embed/fkbv9ChENzs",
     },
   },
   {

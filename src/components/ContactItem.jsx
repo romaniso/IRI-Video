@@ -21,22 +21,26 @@ const ContactItemStyles = styled.div`
       &:hover {
         text-decoration: underline;
       }
-      @media only screen and (max-width: 768px) {
-        font-size: 1.4rem;
+      @media only screen and (max-width: 920px) {
+        font-size: 12px;
       }
     }
   }
   .icon {
     color: black;
-    background: var(--light);
+    background: var(--highlight);
     padding: 0.35rem 0.5rem;
     align-items: center;
     justify-content: center;
-    border-radius: 10%;
+    border-radius: 50%;
     opacity: 0.8;
+    box-shadow: var(--box-shadow);
 
     svg {
       width: 3rem;
+      @media only screen and (max-width: 920px) {
+        width: 2.6rem;
+      }
     }
   }
 `;

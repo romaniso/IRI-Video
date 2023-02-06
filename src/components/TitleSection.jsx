@@ -17,7 +17,7 @@ const TitleSectionStyles = styled.div`
     text-transform: uppercase;
     letter-spacing: 1rem;
     color: var(--light);
-    text-shadow: 0px 0px 20px #ffffff3e;
+    text-shadow: var(--box-shadow);
     &:not(:last-child) {
       margin-bottom: 1rem;
     }

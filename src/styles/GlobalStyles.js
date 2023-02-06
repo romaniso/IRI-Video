@@ -13,11 +13,13 @@ const GlobalStyles = createGlobalStyle`
     --brown: #896a67;
     --light: #f7ebc1;
     --highlight: #e6a555;
+    --success-color: #c2fb24;
     --highlight-gradient: linear-gradient(
           160deg,
           rgba(255, 239, 205, 1) 16%,
           #ba7917 68%
         );
+   --box-shadow: 0px 0px 20px #ffffff3e;
   }
   html{
     font-size: 10px;
