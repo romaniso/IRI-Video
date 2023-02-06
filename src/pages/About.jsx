@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DescriptionSection from "../components/DescriptionSection";
 import Button from "../components/Button";
 import AboutImg from "../assets/images/about-transparent.png";
 import styled from "styled-components";
 import VideoBg from "../assets/videos/background-compressed.mp4";
+
+import ClipLoader from "react-spinners/ClipLoader";
+
+const Cover = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+`;
 
 const AboutPageStyles = styled.div`
   @keyframes animatePhoto {
@@ -177,8 +195,31 @@ const AboutPageStyles = styled.div`
 `;
 
 export default function About() {
+  const [loading, setLoading] = useState(false);
+  const override = {
+    position: "relative",
+    zIndex: 300,
+    borderColor: "eab676",
+  };
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <AboutPageStyles>
+      <Cover className={loading ? "cover" : "cover hidden"}>
+        <ClipLoader
+          color="#eab676"
+          loading={loading}
+          size={150}
+          cssOverride={override}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </Cover>
+
       <div className="about__wrapper">
         <div className="video__wrapper">
           <video autoPlay muted loop playsInline id="background-video">

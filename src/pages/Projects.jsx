@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import data from "../assets/data/galleryRefs";
 import VideoCarousel from "../components/VideoCarousel";
@@ -12,7 +12,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { useMediaQuery } from "react-responsive";
 import GallerySection from "../components/GallerySection";
+import ClipLoader from "react-spinners/ClipLoader";
 
+const Cover = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+`;
 const ProjectsPageStyles = styled.div`
   @keyframes shakeY {
     50% {
@@ -132,6 +148,18 @@ const ProjectsPageStyles = styled.div`
 `;
 
 export default function Projects() {
+  const [loading, setLoading] = useState(false);
+  const override = {
+    position: "relative",
+    zIndex: 300,
+    borderColor: "eab676",
+  };
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
   const [playing, setPlaying] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);
   const [shadowBg, setshadowBg] = useState(false);
@@ -146,6 +174,17 @@ export default function Projects() {
 
   return (
     <ProjectsPageStyles className="projects">
+      <Cover className={loading ? "cover" : "cover hidden"}>
+        <ClipLoader
+          color="#eab676"
+          loading={loading}
+          size={150}
+          cssOverride={override}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </Cover>
+
       <div className="projects__background">
         <img
           src={backgroundImage}

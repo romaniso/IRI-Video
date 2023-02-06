@@ -13,6 +13,25 @@ import {
 } from "react-icons/ai";
 import Button from "../components/Button";
 
+import ClipLoader from "react-spinners/ClipLoader";
+import { useEffect } from "react";
+
+const Cover = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+`;
+
 const ContactPageStyles = styled.div`
   display: flex;
   padding: 12rem 0px;
@@ -28,7 +47,7 @@ const ContactPageStyles = styled.div`
     z-index: -999;
     width: 100%;
     height: 100%;
-    filter: blur(10px);
+    /*filter: blur(10px);*/
     video {
       opacity: 0.8;
       width: 100%;
@@ -195,6 +214,18 @@ const ContactPageStyles = styled.div`
 `;
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const override = {
+    position: "relative",
+    zIndex: 300,
+    borderColor: "eab676",
+  };
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   const [popUp, setPopUp] = useState(false);
   const handlePopup = (popUp) => {
     setPopUp(true);
@@ -227,6 +258,17 @@ export default function Contact() {
   };
   return (
     <ContactPageStyles className="container">
+      <Cover className={loading ? "cover" : "cover hidden"}>
+        <ClipLoader
+          color="#eab676"
+          loading={loading}
+          size={150}
+          cssOverride={override}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </Cover>
+
       <div className="video__wrapper">
         <video autoPlay muted loop playsInline id="background-video">
           <source src={VideoBg} type="video/mp4" />
