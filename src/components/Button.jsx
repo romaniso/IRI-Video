@@ -82,7 +82,18 @@ const ButtonStyles = styled.div`
       justify-content: center;
       align-items: center;
     }
-
+    &.btn--form::before {
+      @media only screen and (max-width: 920px) {
+        width: 100%;
+        height: 2000%;
+      }
+    }
+    &.btn--form::after {
+      @media only screen and (max-width: 920px) {
+        width: 99%;
+        /*height: 2000%;*/
+      }
+    }
     &:hover {
       &::before {
         background: rgba(255, 239, 205, 1) 16%;

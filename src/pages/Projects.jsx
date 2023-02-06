@@ -158,7 +158,7 @@ export default function Projects() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
   }, []);
   const [playing, setPlaying] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);

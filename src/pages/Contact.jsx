@@ -231,7 +231,7 @@ export default function Contact() {
     setPopUp(true);
     setTimeout(() => {
       setPopUp(false);
-    }, 2000);
+    }, 3000);
   };
   const form = useRef();
 
