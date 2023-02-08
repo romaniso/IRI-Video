@@ -38,7 +38,7 @@ const ContactPageStyles = styled.div`
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 920px) {
-    padding: 11rem 0px 3rem;
+    padding: 8rem 0px 3rem;
   }
   .video__wrapper {
     position: fixed;

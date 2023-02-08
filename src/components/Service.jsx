@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillVideoCamera } from "react-icons/ai";
 import DescriptionSection from "./DescriptionSection";
 import styled from "styled-components";
-import "animate.css";
 const ServiceStyles = styled.div`
   max-width: 350px;
   display: flex;
@@ -49,7 +48,7 @@ export default function Service({
   des = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum placeat incidunt delectus commodi laborum culpa at, nulla voluptate quos beatae magnam qui esse dicta dignissimos amet quisquam! Pariatur, hic?",
 }) {
   return (
-    <ServiceStyles className="service card animate__animated animate__fadeInUp">
+    <ServiceStyles className="service card">
       <div className="icon">{icon}</div>
       <div className="title">{title}</div>
       <DescriptionSection>{des}</DescriptionSection>

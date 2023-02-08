@@ -77,8 +77,23 @@ import kitesurfLago_webp from "../images/thumbnails/kitesurfLago.webp";
 import kitesurfLago_jpg from "../images/thumbnails/kitesurfLago.jpg";
 import coverLucianoPetroselli_webp from "../images/thumbnails/coverLucianoPetruselli.webp";
 import coverLucianoPetroselli_jpg from "../images/thumbnails/coverLucianoPetruselli.jpg";
+import neZalyshay_webp from "../images/thumbnails/neZalyshay.webp";
+import neZalyshay_jpg from "../images/thumbnails/neZalyshay.jpg";
 
 const galleryRefs = [
+  {
+    id: uuidv4(),
+    title: "Не залишай",
+    des: "",
+    thumbnail: {
+      webp: neZalyshay_webp,
+      jpg: neZalyshay_jpg,
+    },
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/embed/9NPJV3YOO70",
+    },
+  },
   {
     id: uuidv4(),
     title: "Luciano Petroselli “La musica che gira intorno“ Cover",

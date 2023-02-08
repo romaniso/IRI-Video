@@ -4,7 +4,6 @@ import VideoBg from "../assets/videos/background-compressed.mp4";
 import Poster from "../assets/images/poster.jpg";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import Button from "./Button";
-import "animate.css";
 
 const HeroSectionStyles = styled.div`
   .video__wrapper {
@@ -126,9 +125,7 @@ export default function HeroSection() {
       <div className="container">
         <div className="hero-section__content content">
           <article className="content__banner banner">
-            <h1 className="banner__title animate__animated animate__fadeInLeft">
-              IRI Zinchenko
-            </h1>
+            <h1 className="banner__title">IRI Zinchenko</h1>
             <p className="banner__des">professional video maker</p>
             <Button btnLink="/projects" btnText="" heroBtn={true}></Button>
           </article>

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BsPlayCircle } from "react-icons/bs";
-import "animate.css";
 
 const ButtonStyles = styled.div`
   @keyframes spinBorder {
@@ -148,10 +147,7 @@ export default function Button({
   return (
     <ButtonStyles>
       {heroBtn ? (
-        <Link
-          className="btn--hero  animate__animated animate__fadeInRight"
-          to={btnLink}
-        >
+        <Link className="btn--hero" to={btnLink}>
           <div className="btn--hero__img">
             <BsPlayCircle />
           </div>
