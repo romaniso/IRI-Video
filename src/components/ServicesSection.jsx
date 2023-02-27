@@ -12,7 +12,7 @@ const ServicesSectionStyles = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;*/
-  .wrapper {
+  .container {
     margin: 15rem auto;
     @media only screen and (max-width: 768px) {
       margin: 10rem auto;
@@ -51,8 +51,8 @@ const ServicesSectionStyles = styled.div`
 
 export default function ServicesSection() {
   return (
-    <ServicesSectionStyles className="container services__section">
-      <div className="wrapper">
+    <ServicesSectionStyles className="services__section">
+      <div className="container">
         <TitleSection heading="Services" />
         <div className="services">
           <Service

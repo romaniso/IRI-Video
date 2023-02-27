@@ -49,7 +49,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
     .card {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(50px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.223);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -58,7 +59,7 @@ const GlobalStyles = createGlobalStyle`
     transition: 0.5s ease-out;
   }
   .card:hover {
-    background: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);;
   }
 /* Smooth Scroll  */
   [data-scrollbar] {

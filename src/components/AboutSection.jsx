@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const AboutSectionStyles = styled.div`
   background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px);
   @keyframes animatePhoto {
     50% {
       right: 5px;
