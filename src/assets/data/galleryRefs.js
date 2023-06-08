@@ -79,8 +79,23 @@ import coverLucianoPetroselli_webp from "../images/thumbnails/coverLucianoPetrus
 import coverLucianoPetroselli_jpg from "../images/thumbnails/coverLucianoPetruselli.jpg";
 import neZalyshay_webp from "../images/thumbnails/neZalyshay.webp";
 import neZalyshay_jpg from "../images/thumbnails/neZalyshay.jpg";
+import mary_webp from "../images/thumbnails/mary.webp";
+import mary_jpg from "../images/thumbnails/mary.jpg";
 
 const galleryRefs = [
+  {
+    id: uuidv4(),
+    title: "Luciano Petroselli - Mary",
+    des: "",
+    thumbnail: {
+      webp: mary_webp,
+      jpg: mary_jpg,
+    },
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/embed/4Jm3PsjClOU",
+    },
+  },
   {
     id: uuidv4(),
     title: "Не залишай",
