@@ -81,8 +81,23 @@ import neZalyshay_webp from "../images/thumbnails/neZalyshay.webp";
 import neZalyshay_jpg from "../images/thumbnails/neZalyshay.jpg";
 import mary_webp from "../images/thumbnails/mary.webp";
 import mary_jpg from "../images/thumbnails/mary.jpg";
+import leie_webp from "../images/thumbnails/lei-e.webp";
+import leie_jpg from "../images/thumbnails/lei-e.jpg";
 
 const galleryRefs = [
+  {
+    id: uuidv4(),
+    title: "Lei e- Luciano Petroselli",
+    des: "",
+    thumbnail: {
+      webp: leie_webp,
+      jpg: leie_jpg,
+    },
+    source: {
+      type: "video/youtube",
+      src: "https://www.youtube.com/embed/8t3VLwf-4-A?si=RJysxy9DnHZ5uNDc",
+    },
+  },
   {
     id: uuidv4(),
     title: "Luciano Petroselli - Mary",
